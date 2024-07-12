@@ -19,6 +19,7 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -27,6 +28,7 @@
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -48,6 +50,8 @@ public:
     QPushButton *settingsButton;
     QPushButton *profileButton;
     QPushButton *aboutButton;
+    QPushButton *usersButton;
+    QPushButton *configButton;
     QSpacerItem *verticalSpacer;
     QPushButton *pushButton;
     QWidget *sidebar;
@@ -228,6 +232,16 @@ public:
     QLabel *infoTitle;
     QSpacerItem *InfohorizontalSpacerRight;
     QSpacerItem *verticalSpacer_4;
+    QWidget *usersPage;
+    QWidget *configurationPage;
+    QVBoxLayout *verticalLayout_26;
+    QFrame *headerLabel_2;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *serverHeading;
+    QSpacerItem *horizontalSpacer_6;
+    QLabel *label_41;
+    QLabel *label_42;
+    QTableWidget *table;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -382,6 +396,36 @@ public:
 
         verticalLayout_17->addWidget(aboutButton);
 
+        usersButton = new QPushButton(sidebar_2);
+        usersButton->setObjectName(QString::fromUtf8("usersButton"));
+        usersButton->setMinimumSize(QSize(0, 35));
+        usersButton->setMaximumSize(QSize(16777215, 35));
+        usersButton->setFont(font);
+        usersButton->setStyleSheet(QString::fromUtf8("border-radius:8px;background-color: rgba(0, 0, 0,0);\n"
+"color: rgb(255, 255, 255);\n"
+"border:  none;text-align:left;"));
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/logos/People.png"), QSize(), QIcon::Normal, QIcon::Off);
+        usersButton->setIcon(icon6);
+        usersButton->setIconSize(QSize(20, 20));
+
+        verticalLayout_17->addWidget(usersButton);
+
+        configButton = new QPushButton(sidebar_2);
+        configButton->setObjectName(QString::fromUtf8("configButton"));
+        configButton->setMinimumSize(QSize(0, 35));
+        configButton->setMaximumSize(QSize(16777215, 35));
+        configButton->setFont(font);
+        configButton->setStyleSheet(QString::fromUtf8("border-radius:8px;background-color: rgba(0, 0, 0,0);\n"
+"color: rgb(255, 255, 255);\n"
+"border:  none;text-align:left;"));
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/logos/config.png"), QSize(), QIcon::Normal, QIcon::Off);
+        configButton->setIcon(icon7);
+        configButton->setIconSize(QSize(22, 22));
+
+        verticalLayout_17->addWidget(configButton);
+
 
         verticalLayout_18->addLayout(verticalLayout_17);
 
@@ -400,9 +444,9 @@ public:
         pushButton->setLayoutDirection(Qt::RightToLeft);
         pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(198, 198, 198);\n"
 "border-radius:10px;"));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/logos/Logout.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton->setIcon(icon6);
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/logos/Logout.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton->setIcon(icon8);
         pushButton->setIconSize(QSize(20, 20));
         pushButton->setCheckable(true);
 
@@ -1983,6 +2027,77 @@ public:
         gridLayout_3->addItem(verticalSpacer_4, 2, 0, 1, 1);
 
         stackedWidget->addWidget(aboutusPage);
+        usersPage = new QWidget();
+        usersPage->setObjectName(QString::fromUtf8("usersPage"));
+        stackedWidget->addWidget(usersPage);
+        configurationPage = new QWidget();
+        configurationPage->setObjectName(QString::fromUtf8("configurationPage"));
+        verticalLayout_26 = new QVBoxLayout(configurationPage);
+        verticalLayout_26->setSpacing(20);
+        verticalLayout_26->setObjectName(QString::fromUtf8("verticalLayout_26"));
+        verticalLayout_26->setContentsMargins(20, 10, 20, 20);
+        headerLabel_2 = new QFrame(configurationPage);
+        headerLabel_2->setObjectName(QString::fromUtf8("headerLabel_2"));
+        headerLabel_2->setMinimumSize(QSize(0, 40));
+        headerLabel_2->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0,0);\n"
+"border:none;"));
+        headerLabel_2->setFrameShape(QFrame::StyledPanel);
+        headerLabel_2->setFrameShadow(QFrame::Raised);
+        horizontalLayout_2 = new QHBoxLayout(headerLabel_2);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        serverHeading = new QLabel(headerLabel_2);
+        serverHeading->setObjectName(QString::fromUtf8("serverHeading"));
+        QFont font12;
+        font12.setPointSize(15);
+        font12.setBold(true);
+        serverHeading->setFont(font12);
+        serverHeading->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"background-color: rgba(0, 0, 0,0);\n"
+"border: none;"));
+
+        horizontalLayout_2->addWidget(serverHeading);
+
+        horizontalSpacer_6 = new QSpacerItem(70, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_6);
+
+        label_41 = new QLabel(headerLabel_2);
+        label_41->setObjectName(QString::fromUtf8("label_41"));
+        label_41->setFont(font1);
+        label_41->setStyleSheet(QString::fromUtf8("color: rgb(98, 194, 205);\n"
+""));
+
+        horizontalLayout_2->addWidget(label_41);
+
+        label_42 = new QLabel(headerLabel_2);
+        label_42->setObjectName(QString::fromUtf8("label_42"));
+        label_42->setFont(font3);
+        label_42->setStyleSheet(QString::fromUtf8("color:rgb(192, 191, 188)"));
+
+        horizontalLayout_2->addWidget(label_42);
+
+
+        verticalLayout_26->addWidget(headerLabel_2);
+
+        table = new QTableWidget(configurationPage);
+        table->setObjectName(QString::fromUtf8("table"));
+        table->setFont(font1);
+        table->setFocusPolicy(Qt::NoFocus);
+        table->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0,0);\n"
+"border:none;\n"
+"color: rgb(255, 255, 255);"));
+        table->setFrameShadow(QFrame::Sunken);
+        table->setProperty("showDropIndicator", QVariant(true));
+        table->setDragDropOverwriteMode(true);
+        table->setAlternatingRowColors(false);
+        table->setSelectionMode(QAbstractItemView::NoSelection);
+        table->setGridStyle(Qt::NoPen);
+        table->setSortingEnabled(true);
+        table->setCornerButtonEnabled(false);
+
+        verticalLayout_26->addWidget(table);
+
+        stackedWidget->addWidget(configurationPage);
 
         gridLayout->addWidget(stackedWidget, 0, 2, 1, 1);
 
@@ -1990,8 +2105,8 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
-        stackedWidget_2->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(6);
+        stackedWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2006,6 +2121,8 @@ public:
         settingsButton->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
         profileButton->setText(QCoreApplication::translate("MainWindow", "Profile", nullptr));
         aboutButton->setText(QCoreApplication::translate("MainWindow", "About Us", nullptr));
+        usersButton->setText(QCoreApplication::translate("MainWindow", "Users", nullptr));
+        configButton->setText(QCoreApplication::translate("MainWindow", "Configuration", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Sign Out", nullptr));
         menu->setText(QString());
         connectsym->setText(QString());
@@ -2102,6 +2219,9 @@ public:
         quantumLogoInfo->setText(QString());
         infoDescription->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>OpenVPN GUIv11.15\343\200\2010.0 -A Windows GUI for OpenVPN<br/>Copyright (C) 2004-2005 Mathias Sundman &lt;info@openvpn.se&gt; <br/>Copyright (C) 2008-2014 Heiko Hund &lt;heikoh@users.sf.net&gt;<br/>Copyright (C)2012-2018 OpenVPN GUI contributors <br/>https://github.com/OpenVPN/openvpn-gui/ <br/><br/>OpenVPN-An application to securely tunnel lP networks over a single CP/UDP port with support for SSL/TLS-based session authentic ation and key exchange. packet encryption, packet authentication. and packet compression.<br/>Copyright (C) 2002-2018 OpenVPN Technologies. Inc &lt;info@openvpn.net&gt; https://openvpn.net</p></body></html>", nullptr));
         infoTitle->setText(QCoreApplication::translate("MainWindow", "About Us", nullptr));
+        serverHeading->setText(QCoreApplication::translate("MainWindow", "Server Configuration", nullptr));
+        label_41->setText(QCoreApplication::translate("MainWindow", "Q-SLEEVE", nullptr));
+        label_42->setText(QCoreApplication::translate("MainWindow", "Gateway to Quantum Security", nullptr));
     } // retranslateUi
 
 };

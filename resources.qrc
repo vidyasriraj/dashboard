@@ -17,8 +17,12 @@
         <file>Settings.png</file>
         <file>marker.png</file>
         <file>new.png</file>
+        <file>Computer Support.png</file>
+        <file>People.png</file>
+        <file>config.png</file>
     </qresource>
     <qresource prefix="/">
         <file>map.qml</file>
+        <file>config.txt</file>
     </qresource>
 </RCC>

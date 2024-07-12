@@ -1,0 +1,8 @@
+Qsleeve Server version =3.0.0
+Server Name =vpn.qsleeve.com
+Allowed users = 20 vpn connections
+Current active users =0
+Authenticate users with =local
+Accepting VPN Connections on IP Address =all interfaces
+Port for VPN Client Connections =tcp/443, udp/1194
+OSI Layer = 3 (routing/NAT) 

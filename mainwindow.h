@@ -70,6 +70,29 @@ private slots:
     void on_browse2_clicked();
 
     void on_browse1_clicked();
+    QMap<QString, QString> readKeyValuePairsFromFile(const QString &filePath) {
+        QMap<QString, QString> keyValuePairs;
+        QFile file(filePath);
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            // Handle file open error
+            return keyValuePairs;
+        }
+
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            QString line = in.readLine();
+            QStringList parts = line.split("=");
+            if (parts.size() == 2) {
+                keyValuePairs.insert(parts[0].trimmed(), parts[1].trimmed());
+            }
+        }
+        file.close();
+        return keyValuePairs;
+    }
+    void value_read();
+
+
+    void setConfigurationPage();
 
 private:
     Ui::MainWindow *ui;

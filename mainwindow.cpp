@@ -10,6 +10,7 @@
 #include <QButtonGroup>
 #include <QPropertyAnimation>
 #include <QWidget>
+#include "customDelegate.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -34,6 +35,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->settingsButton, SIGNAL(clicked()), this, SLOT(setSettingsPage()));
     connect(ui->profileButton, SIGNAL(clicked()), this, SLOT(setProfilePage()));
     connect(ui->aboutButton, SIGNAL(clicked()), this, SLOT(setAboutUsPage()));
+    connect(ui->configButton, SIGNAL(clicked()), this, SLOT(setConfigurationPage()));
+
+
+    connect(ui->configButton, &QPushButton::clicked, this, &MainWindow::value_read);
     applyBlurEffect(ui->op1, true);
     applyBlurEffect(ui->op2, true);
     ui->op1->setEnabled(false);
@@ -286,5 +291,51 @@ void MainWindow::on_browse1_clicked()
 
     // Close the dialog explicitly (though it closes automatically when the selection is made)
     fileDialog.close();
+}
+
+
+void MainWindow::value_read()
+{
+    QMap<QString, QString> keyValuePairs = readKeyValuePairsFromFile(":/config.txt");
+    ui->table->setRowCount(keyValuePairs.size());
+    ui->table->setColumnCount(2);
+    ui->table->horizontalHeader()->setVisible(false);
+    ui->table->verticalHeader()->setVisible(false);
+    ui->table->setSelectionMode(QAbstractItemView::NoSelection);
+    ui->table->setFocusPolicy(Qt::NoFocus);
+
+    // Remove row numbers
+    ui->table->setVerticalHeader(nullptr);
+    ui->table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->table->verticalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+
+
+    int row = 0;
+    ui->table->setRowHeight(row, 60);
+
+    for (auto it = keyValuePairs.cbegin(); it != keyValuePairs.cend(); it++) {
+        QTableWidgetItem *keyItem = new QTableWidgetItem(it.key());
+        QTableWidgetItem *valueItem = new QTableWidgetItem(it.value());
+
+        ui->table->setItem(row, 0, keyItem);
+        ui->table->setColumnWidth(0, 360);
+        ui->table->setItem(row, 1, valueItem);
+        ui->table->setColumnWidth(1,160);
+        keyItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+        valueItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+
+        row++;
+        ui->table->setRowHeight(row, 60);
+    }
+
+    ui->table->setItemDelegate(new customDelegate(ui->table));  // Set custom delegate for drawing lines
+
+}
+
+
+void MainWindow::setConfigurationPage()
+{
+    setViewPage(6,ui->configButton);
+    ui->menu_1->setEnabled(false);
 }
 

@@ -52,10 +52,12 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = main.cpp \
+SOURCES       = customDelegate.cpp \
+		main.cpp \
 		mainwindow.cpp qrc_resources.cpp \
 		moc_mainwindow.cpp
-OBJECTS       = main.o \
+OBJECTS       = customDelegate.o \
+		main.o \
 		mainwindow.o \
 		qrc_resources.o \
 		moc_mainwindow.o
@@ -142,7 +144,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		dashboard.pro mainwindow.h main.cpp \
+		dashboard.pro customDelegate.h \
+		mainwindow.h customDelegate.cpp \
+		main.cpp \
 		mainwindow.cpp
 QMAKE_TARGET  = dashboard
 DESTDIR       = 
@@ -342,8 +346,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents resources.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents customDelegate.h mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents customDelegate.cpp main.cpp mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
 
@@ -374,23 +378,27 @@ compiler_rcc_clean:
 qrc_resources.cpp: resources.qrc \
 		/usr/lib/qt5/bin/rcc \
 		map.qml \
-		Menu.png \
+		config.txt \
 		Time\ Machine.png \
-		File.png \
-		connected_icon.png \
-		upload.png \
-		green.png \
-		Settings.png \
 		Download.png \
-		About.png \
-		Control\ Panel.png \
-		connect_icon.png \
-		marker.png \
-		Male\ User.png \
 		red.png \
+		upload.png \
+		File.png \
+		Web\ Address.png \
+		Menu.png \
+		marker.png \
+		config.png \
+		Settings.png \
+		connected_icon.png \
+		connect_icon.png \
+		green.png \
+		Male\ User.png \
+		People.png \
+		Computer\ Support.png \
 		Logout.png \
 		new.png \
-		Web\ Address.png
+		Control\ Panel.png \
+		About.png
 	/usr/lib/qt5/bin/rcc -name resources resources.qrc -o qrc_resources.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
@@ -429,11 +437,15 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 ####### Compile
 
+customDelegate.o: customDelegate.cpp customDelegate.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o customDelegate.o customDelegate.cpp
+
 main.o: main.cpp mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		customDelegate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 qrc_resources.o: qrc_resources.cpp 
