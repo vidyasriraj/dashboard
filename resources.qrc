@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/logos">
+        <file>connected_icon.png</file>
+        <file>connect_icon.png</file>
+        <file>green.png</file>
+        <file>red.png</file>
+        <file>Menu.png</file>
+        <file>Download.png</file>
+        <file>Time Machine.png</file>
+        <file>upload.png</file>
+        <file>Web Address.png</file>
+        <file>Logout.png</file>
+        <file>About.png</file>
+        <file>Control Panel.png</file>
+        <file>File.png</file>
+        <file>Male User.png</file>
+        <file>Settings.png</file>
+        <file>marker.png</file>
+        <file>new.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>map.qml</file>
+    </qresource>
+</RCC>
