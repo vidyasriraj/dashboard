@@ -386,6 +386,18 @@ border:  none;text-align:left;</string>
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="styleSheet">
+            <string notr="true">border-radius:8px;background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:  none;text-align:left;</string>
+           </property>
+           <property name="text">
+            <string>Users</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item>
