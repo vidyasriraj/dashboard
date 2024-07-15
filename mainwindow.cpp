@@ -11,6 +11,8 @@
 #include <QPropertyAnimation>
 #include <QWidget>
 #include "customDelegate.h"
+#include "users.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -33,9 +35,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->logsButton, SIGNAL(clicked()), this, SLOT(setLogsPage()));
     connect(ui->dashboardButton, SIGNAL(clicked()), this, SLOT(setDashboardPage()));
     connect(ui->settingsButton, SIGNAL(clicked()), this, SLOT(setSettingsPage()));
-    connect(ui->profileButton, SIGNAL(clicked()), this, SLOT(setProfilePage()));
+    // connect(ui->profileButton, SIGNAL(clicked()), this, SLOT(setProfilePage()));
     connect(ui->aboutButton, SIGNAL(clicked()), this, SLOT(setAboutUsPage()));
     connect(ui->configButton, SIGNAL(clicked()), this, SLOT(setConfigurationPage()));
+    connect(ui->usersButton, SIGNAL(clicked()), this, SLOT(setUsersPage()));
 
 
     connect(ui->configButton, &QPushButton::clicked, this, &MainWindow::value_read);
@@ -59,6 +62,17 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->browse1, SIGNAL(clicked()), this, SLOT(on_browse1_clicked()));
     connect(ui->browse2, SIGNAL(clicked()), this, SLOT(on_browse2_clicked()));
+
+
+    currentUsers = new Users(this);
+    ui->mainBody->layout()->addWidget(currentUsers);
+
+    // Connect the "Add" button to the addUser slot
+    connect(ui->addUserBtn, &QPushButton::clicked, this, &MainWindow::addUser);
+    connect(currentUsers, &Users::userDeleted, this, &MainWindow::handleDeletedUser);
+    connect(ui->mainCheckBox, &QCheckBox::toggled, this, &MainWindow::onMainCheckBoxToggled);
+    connect(currentUsers, &Users::checkBoxStateChanged, this, &MainWindow::updateMainCheckBox);
+
 
 }
 
@@ -125,11 +139,11 @@ void MainWindow::setViewPage(int index, QPushButton *clickedButton) {
     ui->stackedWidget->setCurrentIndex(index);
 
     if (clickedButton != nullptr) {
-        clickedButton->setStyleSheet("background-color: rgb(121,121,121);border-radius:8px;color: rgb(255, 255, 255);border:  none;text-align:left;QPushButton::focus { background-color:rgb(217, 217, 217); }");
+        clickedButton->setStyleSheet("padding:10px;background-color: rgb(121,121,121);border-radius:8px;color: rgb(255, 255, 255);border:  none;text-align:left;QPushButton::focus { background-color:rgb(217, 217, 217); }");
     }
 
     if (previousPage != nullptr && previousPage != clickedButton) {
-        previousPage->setStyleSheet("background-color: rgba(0, 0, 0,0);color: rgb(255, 255, 255);border:  none;text-align:left;");
+        previousPage->setStyleSheet("padding:10px;background-color: rgba(0, 0, 0,0);color: rgb(255, 255, 255);border:  none;text-align:left;");
     }
 
     previousPage = clickedButton;
@@ -172,16 +186,16 @@ void MainWindow::setSettingsPage()
 }
 
 
-void MainWindow::setProfilePage()
-{
-    setViewPage(3,ui->profileButton);
-    ui->menu_1->setEnabled(false);
-}
+// void MainWindow::setProfilePage()
+// {
+//     setViewPage(3,ui->profileButton);
+//     ui->menu_1->setEnabled(false);
+// }
 
 
 void MainWindow::setAboutUsPage()
 {
-    setViewPage(4,ui->aboutButton);
+    setViewPage(3,ui->aboutButton);
     ui->menu_1->setEnabled(false);
 }
 
@@ -189,11 +203,11 @@ void MainWindow::setSettings(int index, QPushButton *clickedButton) {
     ui->stackedWidget_2->setCurrentIndex(index);
 
     if (clickedButton != nullptr) {
-        clickedButton->setStyleSheet("background-color: rgb(121,121,121);border-radius:8px;color: rgb(255, 255, 255);border:  none;text-align:left;QPushButton::focus { background-color:rgb(217, 217, 217); }");
+        clickedButton->setStyleSheet("background-color: rgb(121,121,121);border-radius:8px;padding:10px;color: rgb(255, 255, 255);border:  none;text-align:left;QPushButton::focus { background-color:rgb(217, 217, 217); }");
     }
 
     if (previousSettingsPage != nullptr && previousPage != clickedButton) {
-        previousSettingsPage->setStyleSheet("background-color: rgba(0, 0, 0,0);color: rgb(255, 255, 255);border:  none;text-align:left;");
+        previousSettingsPage->setStyleSheet("background-color: rgba(0, 0, 0,0);color: rgb(255, 255, 255);border:  none;text-align:left;padding:10px;");
     }
 
     previousSettingsPage = clickedButton;
@@ -318,7 +332,7 @@ void MainWindow::value_read()
         QTableWidgetItem *valueItem = new QTableWidgetItem(it.value());
 
         ui->table->setItem(row, 0, keyItem);
-        ui->table->setColumnWidth(0, 360);
+        ui->table->setColumnWidth(0, 390);
         ui->table->setItem(row, 1, valueItem);
         ui->table->setColumnWidth(1,160);
         keyItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
@@ -335,7 +349,101 @@ void MainWindow::value_read()
 
 void MainWindow::setConfigurationPage()
 {
-    setViewPage(6,ui->configButton);
+    setViewPage(5,ui->configButton);
     ui->menu_1->setEnabled(false);
 }
+
+
+
+void MainWindow::addUser()
+{
+    // This is just an example. In a real application, you'd get this information from user input or a network connection.
+    QString name = "User " + QString::number(QRandomGenerator::global()->bounded(100));
+    QString ip = QString::number(QRandomGenerator::global()->bounded(256)) + "." +
+                 QString::number(QRandomGenerator::global()->bounded(256)) + "." +
+                 QString::number(QRandomGenerator::global()->bounded(256)) + "." +
+                 QString::number(QRandomGenerator::global()->bounded(256));
+    bool isActive = (QRandomGenerator::global()->bounded(2) == 0);
+
+    QLabel *statusLabel = new QLabel;
+    statusLabel->setFixedSize(80, 25); // Adjust size as needed
+
+    QPixmap pixmap; // Create a QPixmap object
+    if (isActive) {
+        pixmap = QPixmap(":/logos/act.png"); // Load active icon
+    } else {
+        pixmap = QPixmap(":/logos/inact.png"); // Load inactive icon
+    }
+
+    // Scale pixmap to fit the size of the QLabel
+    pixmap = pixmap.scaled(statusLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+
+    // Set pixmap to the QLabel
+    statusLabel->setPixmap(pixmap);
+    statusLabel->setAlignment(Qt::AlignCenter|Qt::AlignCenter);
+    QString connectedTime = QString::number(QRandomGenerator::global()->bounded(24)) + ":" +
+                            QString("%1").arg(QRandomGenerator::global()->bounded(60), 2, 10, QChar('0'));
+
+    currentUsers->addUser(name, ip, statusLabel, connectedTime);
+}
+
+void MainWindow::handleDeletedUser(const QString &name, const QString &ip,  const QString &connectedTime)
+{
+    qDebug() << "Deleted user details:";
+    qDebug() << "Name:" << name;
+    qDebug() << "IP:" << ip;
+    qDebug() << "Connected Time:" << connectedTime;
+
+    // You can add more code here to handle the deleted user information as needed
+}
+void MainWindow::processCheckBoxes()
+{
+    QList<QCheckBox*> checkBoxes = currentUsers->getCheckBoxes();
+    for (int i = 0; i < checkBoxes.size(); ++i) {
+        QCheckBox *checkbox = checkBoxes[i];
+        qDebug() << "Checkbox" << i + 1 << "is" << (checkbox->isChecked() ? "checked" : "unchecked");
+    }
+}
+void MainWindow::onMainCheckBoxToggled(bool checked)
+{
+    currentUsers->setAllCheckBoxes(checked);
+}
+
+void MainWindow::updateMainCheckBox()
+{
+    QList<QCheckBox*> checkBoxes = currentUsers->getCheckBoxes();
+    bool allChecked = true;
+    bool anyChecked = false;
+
+    for (QCheckBox* checkbox : checkBoxes) {
+        if (checkbox->isChecked()) {
+            anyChecked = true;
+        } else {
+            allChecked = false;
+        }
+    }
+
+    // Block signals to prevent recursive calls
+    ui->mainCheckBox->blockSignals(true);
+    if (allChecked) {
+        ui->mainCheckBox->setCheckState(Qt::Checked);
+    } else if (anyChecked) {
+        ui->mainCheckBox->setCheckState(Qt::Unchecked);
+    } else {
+        ui->mainCheckBox->setCheckState(Qt::Unchecked);
+    }
+    ui->mainCheckBox->blockSignals(false);
+}
+
+
+
+
+void MainWindow::setUsersPage()
+{
+    setViewPage(4,ui->usersButton);
+    ui->menu_1->setEnabled(false);
+}
+
+
+
 

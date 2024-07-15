@@ -16,6 +16,7 @@
 #include <QMap>
 #include <QVBoxLayout>
 #include <QTableWidget>
+#include  "users.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -46,7 +47,7 @@ private slots:
     void setLogsPage();
     void setDashboardPage();
     void setSettingsPage();
-    void setProfilePage();
+    // void setProfilePage();
     void setAboutUsPage();
 
 
@@ -90,9 +91,17 @@ private slots:
         return keyValuePairs;
     }
     void value_read();
-
+    void addUser();
+    void handleDeletedUser(const QString &name, const QString &ip,  const QString &connectedTime);
+    void processCheckBoxes();
+    void onMainCheckBoxToggled(bool checked);
+    void updateMainCheckBox();
 
     void setConfigurationPage();
+
+    void setUsersPage();
+
+
 
 private:
     Ui::MainWindow *ui;
@@ -101,5 +110,7 @@ private:
 
     QPushButton *previousPage;
     QPushButton *previousSettingsPage;
+    Users *currentUsers;
+
 };
 #endif // MAINWINDOW_H

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1059</width>
-    <height>749</height>
+    <width>1060</width>
+    <height>724</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,7 +23,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>QSLEEVE'</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/logos/qaiglogo.png</normaloff>:/logos/qaiglogo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #071C27, stop:0.95 #000000);
@@ -43,493 +47,10 @@
     <property name="bottomMargin">
      <number>0</number>
     </property>
-    <property name="horizontalSpacing">
+    <property name="spacing">
      <number>0</number>
     </property>
-    <property name="verticalSpacing">
-     <number>6</number>
-    </property>
-    <item row="0" column="1">
-     <widget class="QWidget" name="sidebar_2" native="true">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>350</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>350</width>
-        <height>1677219</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgba(255, 255, 255,30);</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_18">
-       <property name="leftMargin">
-        <number>9</number>
-       </property>
-       <property name="topMargin">
-        <number>9</number>
-       </property>
-       <property name="rightMargin">
-        <number>9</number>
-       </property>
-       <property name="bottomMargin">
-        <number>9</number>
-       </property>
-       <item>
-        <widget class="QPushButton" name="menu_1">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>70</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>70</width>
-           <height>64</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgba(0, 0, 0,0);
-border:  none;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/Menu.png</normaloff>:/logos/Menu.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>40</width>
-           <height>64</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_17">
-         <property name="spacing">
-          <number>15</number>
-         </property>
-         <property name="leftMargin">
-          <number>25</number>
-         </property>
-         <property name="topMargin">
-          <number>20</number>
-         </property>
-         <property name="rightMargin">
-          <number>20</number>
-         </property>
-         <property name="bottomMargin">
-          <number>20</number>
-         </property>
-         <item alignment="Qt::AlignVCenter">
-          <widget class="QPushButton" name="dashboardButton">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: rgba(0, 0, 0,0);
-color: rgb(255, 255, 255);
-border:  none;
-text-align:left;
-border-radius:8px;
-</string>
-           </property>
-           <property name="text">
-            <string>Dashboard</string>
-           </property>
-           <property name="icon">
-            <iconset resource="resources.qrc">
-             <normaloff>:/logos/Control Panel.png</normaloff>:/logos/Control Panel.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>25</width>
-             <height>25</height>
-            </size>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item alignment="Qt::AlignVCenter">
-          <widget class="QPushButton" name="logsButton">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-radius:8px;background-color: rgba(0, 0, 0,0);
-color: rgb(255, 255, 255);
-border:  none;
-text-align:left;</string>
-           </property>
-           <property name="text">
-            <string>Logs</string>
-           </property>
-           <property name="icon">
-            <iconset resource="resources.qrc">
-             <normaloff>:/logos/File.png</normaloff>:/logos/File.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>20</width>
-             <height>25</height>
-            </size>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item alignment="Qt::AlignVCenter">
-          <widget class="QPushButton" name="settingsButton">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-radius:8px;background-color: rgba(0, 0, 0,0);
-color: rgb(255, 255, 255);
-border:  none;
-text-align:left;</string>
-           </property>
-           <property name="text">
-            <string>Settings</string>
-           </property>
-           <property name="icon">
-            <iconset resource="resources.qrc">
-             <normaloff>:/logos/Settings.png</normaloff>:/logos/Settings.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>20</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="profileButton">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-radius:8px;background-color: rgba(0, 0, 0,0);
-color: rgb(255, 255, 255);
-border:  none;text-align:left;</string>
-           </property>
-           <property name="text">
-            <string>Profile</string>
-           </property>
-           <property name="icon">
-            <iconset resource="resources.qrc">
-             <normaloff>:/logos/Male User.png</normaloff>:/logos/Male User.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>20</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="aboutButton">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-radius:8px;background-color: rgba(0, 0, 0,0);
-color: rgb(255, 255, 255);
-border:  none;text-align:left;</string>
-           </property>
-           <property name="text">
-            <string>About Us</string>
-           </property>
-           <property name="icon">
-            <iconset resource="resources.qrc">
-             <normaloff>:/logos/About.png</normaloff>:/logos/About.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>20</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="usersButton">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-radius:8px;background-color: rgba(0, 0, 0,0);
-color: rgb(255, 255, 255);
-border:  none;text-align:left;</string>
-           </property>
-           <property name="text">
-            <string>Users</string>
-           </property>
-           <property name="icon">
-            <iconset resource="resources.qrc">
-             <normaloff>:/logos/People.png</normaloff>:/logos/People.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>20</width>
-             <height>20</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="configButton">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>35</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border-radius:8px;background-color: rgba(0, 0, 0,0);
-color: rgb(255, 255, 255);
-border:  none;text-align:left;</string>
-           </property>
-           <property name="text">
-            <string>Configuration</string>
-           </property>
-           <property name="icon">
-            <iconset resource="resources.qrc">
-             <normaloff>:/logos/config.png</normaloff>:/logos/config.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>22</width>
-             <height>22</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>13</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::RightToLeft</enum>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(198, 198, 198);
-border-radius:10px;</string>
-         </property>
-         <property name="text">
-          <string>Sign Out</string>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/Logout.png</normaloff>:/logos/Logout.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="0" column="0" rowspan="2">
+    <item row="0" column="0">
      <widget class="QWidget" name="sidebar" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
@@ -591,7 +112,7 @@ border:  none;</string>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>50</height>
+           <height>60</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -677,6 +198,9 @@ border:none;</string>
            <width>0</width>
            <height>270</height>
           </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgba(0, 0, 0,0);
@@ -981,10 +505,457 @@ color:rgb(85, 142, 97)
       </layout>
      </widget>
     </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="sidebar_2" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>350</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>350</width>
+        <height>1677219</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255,30);</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_18">
+       <property name="leftMargin">
+        <number>9</number>
+       </property>
+       <property name="topMargin">
+        <number>9</number>
+       </property>
+       <property name="rightMargin">
+        <number>9</number>
+       </property>
+       <property name="bottomMargin">
+        <number>9</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="menu_1">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>70</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(0, 0, 0,0);
+border:  none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/logos/Menu.png</normaloff>:/logos/Menu.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>64</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_17">
+         <property name="spacing">
+          <number>15</number>
+         </property>
+         <property name="leftMargin">
+          <number>15</number>
+         </property>
+         <property name="topMargin">
+          <number>20</number>
+         </property>
+         <property name="rightMargin">
+          <number>20</number>
+         </property>
+         <property name="bottomMargin">
+          <number>20</number>
+         </property>
+         <item alignment="Qt::AlignVCenter">
+          <widget class="QPushButton" name="dashboardButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:  none;
+text-align:left;
+border-radius:8px;
+padding:10px
+</string>
+           </property>
+           <property name="text">
+            <string>Dashboard</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/logos/Control Panel.png</normaloff>:/logos/Control Panel.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignVCenter">
+          <widget class="QPushButton" name="logsButton">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:8px;background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:  none;
+text-align:left;
+padding:10px;
+padding-bottom:8px;</string>
+           </property>
+           <property name="text">
+            <string>Logs</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/logos/File.png</normaloff>:/logos/File.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignVCenter">
+          <widget class="QPushButton" name="settingsButton">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">padding:10px;border-radius:8px;background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:  none;
+text-align:left;
+padding-bottom:8px;</string>
+           </property>
+           <property name="text">
+            <string>Settings</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/logos/Settings.png</normaloff>:/logos/Settings.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="aboutButton">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">padding:10px;border-radius:8px;background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:  none;text-align:left;</string>
+           </property>
+           <property name="text">
+            <string>About Us</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/logos/About.png</normaloff>:/logos/About.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="usersButton">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">padding:10px;border-radius:8px;background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:  none;text-align:left;</string>
+           </property>
+           <property name="text">
+            <string>Users</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/logos/People.png</normaloff>:/logos/People.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="configButton">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">padding:10px;border-radius:8px;background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:  none;text-align:left;
+padding-bottom:8px;</string>
+           </property>
+           <property name="text">
+            <string>Configuration</string>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/logos/config.png</normaloff>:/logos/config.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>22</width>
+             <height>22</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(198, 198, 198);
+border-radius:10px;</string>
+         </property>
+         <property name="text">
+          <string>Sign Out</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/logos/Logout.png</normaloff>:/logos/Logout.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item row="0" column="2">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>6</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="dashboardPage">
        <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1045,6 +1016,34 @@ border:none;</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_2">
               <item row="0" column="1">
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>70</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLabel" name="label_22">
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color:rgb(192, 191, 188)</string>
+                </property>
+                <property name="text">
+                 <string>Gateway to Quantum Security</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
                <widget class="QLabel" name="label_21">
                 <property name="font">
                  <font>
@@ -1061,33 +1060,22 @@ border:none;</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="2">
-               <widget class="QLabel" name="label_22">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_19">
                 <property name="font">
                  <font>
-                  <pointsize>10</pointsize>
+                  <family>Ubuntu Sans</family>
+                  <pointsize>20</pointsize>
+                  <bold>true</bold>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color:rgb(192, 191, 188)</string>
+                 <string notr="true">color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="text">
-                 <string>Gateway to Quantum Security</string>
+                 <string>DASHBOARD</string>
                 </property>
                </widget>
-              </item>
-              <item row="0" column="0">
-               <spacer name="horizontalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>70</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
               </item>
              </layout>
             </widget>
@@ -1382,11 +1370,20 @@ border:none;</string>
            </property>
            <item>
             <layout class="QHBoxLayout" name="MainTitleBar">
+             <property name="leftMargin">
+              <number>8</number>
+             </property>
              <item>
               <widget class="QLabel" name="label_15">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="font">
                 <font>
-                 <pointsize>12</pointsize>
+                 <pointsize>20</pointsize>
                  <bold>true</bold>
                 </font>
                </property>
@@ -1521,8 +1518,8 @@ QScrollCorner {
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>301</width>
-                <height>657</height>
+                <width>796</width>
+                <height>703</height>
                </rect>
               </property>
               <property name="styleSheet">
@@ -1535,7 +1532,8 @@ QScrollCorner {
                   <string notr="true">color: rgb(255, 255, 255);
 background-color: rgba(255,255,255,30);
 border:none;
-border-radius:10px;</string>
+border-radius:10px;
+padding:10px;</string>
                  </property>
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
@@ -1584,92 +1582,16 @@ li.checked::marker { content: &quot;\2612&quot;; }
          <number>0</number>
         </property>
         <property name="topMargin">
-         <number>9</number>
+         <number>0</number>
         </property>
         <property name="rightMargin">
-         <number>9</number>
+         <number>0</number>
         </property>
         <property name="bottomMargin">
          <number>0</number>
         </property>
         <item>
-         <layout class="QHBoxLayout" name="settingsTitle">
-          <item>
-           <widget class="QLabel" name="label_20">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgba(0, 0, 0,0);
-color: rgb(255, 255, 255);
-border:  none;
-text-align:left;</string>
-            </property>
-            <property name="text">
-             <string>SETTINGS</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_4">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="TitleBar_3">
-            <item>
-             <widget class="QLabel" name="label_32">
-              <property name="font">
-               <font>
-                <pointsize>12</pointsize>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: rgb(98, 194, 205);
-background-color: rgba(0, 0, 0,0);
-border:none;</string>
-              </property>
-              <property name="text">
-               <string>QSLEEVE</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_33">
-              <property name="styleSheet">
-               <string notr="true">color:rgb(192, 191, 188);
-background-color: rgba(0, 0, 0,0);
-border:none;</string>
-              </property>
-              <property name="locale">
-               <locale language="English" country="UnitedKingdom"/>
-              </property>
-              <property name="text">
-               <string>Gateway to Quantum Security</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="mainSettings">
-          <property name="spacing">
-           <number>0</number>
-          </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
           <item>
            <widget class="QFrame" name="sidebarSettings">
             <property name="minimumSize">
@@ -1732,8 +1654,11 @@ border:none;</string>
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
                  <property name="styleSheet">
-                  <string notr="true">background-color: rgba(0, 0, 0,0);
+                  <string notr="true">padding:10px;background-color: rgba(0, 0, 0,0);
 color: rgb(255, 255, 255);
 border:  none;
 text-align:left;
@@ -1759,8 +1684,11 @@ border-radius:8px;
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
                  <property name="styleSheet">
-                  <string notr="true">background-color: rgba(0, 0, 0,0);
+                  <string notr="true">padding:10px;background-color: rgba(0, 0, 0,0);
 color: rgb(255, 255, 255);
 border:  none;
 text-align:left;
@@ -1786,8 +1714,11 @@ border-radius:8px;
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
                  <property name="styleSheet">
-                  <string notr="true">background-color: rgba(0, 0, 0,0);
+                  <string notr="true">padding:10px;background-color: rgba(0, 0, 0,0);
 color: rgb(255, 255, 255);
 border:  none;
 text-align:left;
@@ -1818,114 +1749,192 @@ border-radius:8px;
            </widget>
           </item>
           <item>
-           <widget class="QStackedWidget" name="stackedWidget_2">
-            <property name="currentIndex">
-             <number>0</number>
-            </property>
-            <widget class="QWidget" name="generalSettingspage">
-             <layout class="QVBoxLayout" name="verticalLayout_24">
+           <layout class="QVBoxLayout" name="verticalLayout_32">
+            <item>
+             <layout class="QHBoxLayout" name="settingsTitle">
+              <property name="leftMargin">
+               <number>29</number>
+              </property>
               <item>
-               <spacer name="verticalSpacer_10">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
+               <widget class="QLabel" name="label_20">
+                <property name="font">
+                 <font>
+                  <pointsize>20</pointsize>
+                  <bold>true</bold>
+                 </font>
                 </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:  none;
+text-align:left;</string>
+                </property>
+                <property name="text">
+                 <string>SETTINGS</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
-                  <width>20</width>
-                  <height>40</height>
+                  <width>40</width>
+                  <height>20</height>
                  </size>
                 </property>
                </spacer>
               </item>
               <item>
-               <widget class="QFrame" name="frame_3">
-                <property name="maximumSize">
-                 <size>
-                  <width>650</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgba(0, 0, 0,0);
+               <layout class="QHBoxLayout" name="TitleBar_3">
+                <item>
+                 <widget class="QLabel" name="label_32">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(98, 194, 205);
+background-color: rgba(0, 0, 0,0);
 border:none;</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_6">
-                 <property name="leftMargin">
-                  <number>25</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>20</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>20</number>
-                 </property>
-                 <property name="verticalSpacing">
-                  <number>10</number>
-                 </property>
-                 <item row="2" column="0" colspan="2">
-                  <widget class="Line" name="line_5">
-                   <property name="font">
-                    <font>
-                     <stylestrategy>PreferDefault</stylestrategy>
-                    </font>
+                  </property>
+                  <property name="text">
+                   <string>QSLEEVE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_33">
+                  <property name="styleSheet">
+                   <string notr="true">color:rgb(192, 191, 188);
+background-color: rgba(0, 0, 0,0);
+border:none;</string>
+                  </property>
+                  <property name="locale">
+                   <locale language="English" country="UnitedKingdom"/>
+                  </property>
+                  <property name="text">
+                   <string>Gateway to Quantum Security</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QStackedWidget" name="stackedWidget_2">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="generalSettingspage">
+               <layout class="QVBoxLayout" name="verticalLayout_24">
+                <item>
+                 <spacer name="verticalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QFrame" name="frame_3">
+                  <property name="maximumSize">
+                   <size>
+                    <width>650</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;</string>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_6">
+                   <property name="leftMargin">
+                    <number>25</number>
                    </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
+                   <property name="topMargin">
+                    <number>20</number>
                    </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: &quot;#474748&quot;;
+                   <property name="bottomMargin">
+                    <number>20</number>
+                   </property>
+                   <property name="verticalSpacing">
+                    <number>10</number>
+                   </property>
+                   <item row="2" column="0" colspan="2">
+                    <widget class="Line" name="line_5">
+                     <property name="font">
+                      <font>
+                       <stylestrategy>PreferDefault</stylestrategy>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: &quot;#474748&quot;;
 
 </string>
-                   </property>
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="0">
-                  <widget class="QLabel" name="userInterfaceTitle_2">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Sans Serif</family>
-                     <pointsize>16</pointsize>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: transparent;
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="userInterfaceTitle_2">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Sans Serif</family>
+                       <pointsize>16</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: transparent;
 color: rgb(255, 255, 255);
 margin-top: &quot;10px&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string>Startup</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignBottom|Qt::AlignJustify</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="9" column="0">
-                  <widget class="QCheckBox" name="checkBox_5">
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QCheckBox {
+                     </property>
+                     <property name="text">
+                      <string>Startup</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignJustify</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="8" column="0">
+                    <widget class="QCheckBox" name="checkBox_5">
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QCheckBox {
     background-color: transparent; 
     color: white;
 	margin-left: &quot;40px&quot;;
@@ -1951,71 +1960,150 @@ QCheckBox::indicator:unchecked {
     border: 1px solid white;
 }
 </string>
-                   </property>
-                   <property name="text">
-                    <string>Silent Connection</string>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>5</width>
-                     <height>5</height>
-                    </size>
-                   </property>
-                   <property name="checked">
-                    <bool>false</bool>
-                   </property>
-                   <property name="tristate">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="QLabel" name="languageLabel">
-                   <property name="font">
-                    <font>
-                     <family>Sans Serif</family>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: transparent;
+                     </property>
+                     <property name="text">
+                      <string>Silent Connection</string>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>5</width>
+                       <height>5</height>
+                      </size>
+                     </property>
+                     <property name="checked">
+                      <bool>false</bool>
+                     </property>
+                     <property name="tristate">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0" colspan="2">
+                    <widget class="QCheckBox" name="checkBox_2">
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QCheckBox {
+    background-color: transparent; 
+    color: white;
+	margin-left: &quot;40px&quot;;
+   
+}
+
+QCheckBox::indicator {
+    border: 1px solid white; 
+border-radius: 3px;
+    width: 15px; 
+    height: 15px;
+    background-color: transparent;
+}
+
+QCheckBox::indicator:checked {
+    image: url(:/logos/new.png); 
+    background-color: transparent; 
+    border: 1px solid white;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: transparent;
+    border: 1px solid white;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Launch on Windows Startup</string>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>5</width>
+                       <height>5</height>
+                      </size>
+                     </property>
+                     <property name="checked">
+                      <bool>false</bool>
+                     </property>
+                     <property name="tristate">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="languageLabel">
+                     <property name="font">
+                      <font>
+                       <family>Sans Serif</family>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: transparent;
 color: rgb(255, 255, 255);
 margin-left: &quot;40px&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string>Language</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QComboBox" name="selectLanguageInput">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>131</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Sans Serif</family>
-                    </font>
-                   </property>
-                   <property name="contextMenuPolicy">
-                    <enum>Qt::NoContextMenu</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QComboBox {
+                     </property>
+                     <property name="text">
+                      <string>Language</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0" colspan="2">
+                    <widget class="Line" name="line_4">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: &quot;#474748&quot;;</string>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0">
+                    <widget class="QLabel" name="userInterfaceTitle_3">
+                     <property name="font">
+                      <font>
+                       <family>Sans Serif</family>
+                       <pointsize>16</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+margin-bottom: &quot;10px&quot;;</string>
+                     </property>
+                     <property name="text">
+                      <string>Preferences</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QComboBox" name="selectLanguageInput">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>131</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Sans Serif</family>
+                      </font>
+                     </property>
+                     <property name="contextMenuPolicy">
+                      <enum>Qt::NoContextMenu</enum>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QComboBox {
     border: 1px solid gray;
     border-radius: 3px;
     padding: 1px 18px 1px 3px;
@@ -2041,53 +2129,53 @@ QComboBox QAbstractItemView {
     selection-background-color: rgba(79, 158, 164,100);
 }
 </string>
-                   </property>
-                   <property name="locale">
-                    <locale language="French" country="France"/>
-                   </property>
-                   <property name="editable">
-                    <bool>false</bool>
-                   </property>
-                   <property name="currentText">
-                    <string>English</string>
-                   </property>
-                   <property name="frame">
-                    <bool>true</bool>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>English</string>
-                    </property>
+                     </property>
+                     <property name="locale">
+                      <locale language="French" country="France"/>
+                     </property>
+                     <property name="editable">
+                      <bool>false</bool>
+                     </property>
+                     <property name="currentText">
+                      <string>English</string>
+                     </property>
+                     <property name="frame">
+                      <bool>true</bool>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>English</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>French</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Spanish</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Chinese</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Italian</string>
+                      </property>
+                     </item>
+                    </widget>
                    </item>
-                   <item>
-                    <property name="text">
-                     <string>French</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Spanish</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Chinese</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Italian</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                 <item row="8" column="0">
-                  <widget class="QCheckBox" name="checkBox_4">
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QCheckBox {
+                   <item row="7" column="0">
+                    <widget class="QCheckBox" name="checkBox_3">
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QCheckBox {
     background-color: transparent; 
     color: white;
 	margin-left: &quot;40px&quot;;
@@ -2113,467 +2201,482 @@ QCheckBox::indicator:unchecked {
     border: 1px solid white;
 }
 </string>
-                   </property>
-                   <property name="text">
-                    <string>Show script window</string>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>5</width>
-                     <height>5</height>
-                    </size>
-                   </property>
-                   <property name="checked">
-                    <bool>false</bool>
-                   </property>
-                   <property name="tristate">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="userInterfaceTitle">
-                   <property name="font">
-                    <font>
-                     <family>Sans Serif</family>
-                     <pointsize>16</pointsize>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: transparent;
+                     </property>
+                     <property name="text">
+                      <string>Append to log</string>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>5</width>
+                       <height>5</height>
+                      </size>
+                     </property>
+                     <property name="checked">
+                      <bool>false</bool>
+                     </property>
+                     <property name="tristate">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="userInterfaceTitle">
+                     <property name="font">
+                      <font>
+                       <family>Sans Serif</family>
+                       <pointsize>16</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: transparent;
 color: rgb(255, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string>User Interface</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="14" column="0">
-                  <widget class="QRadioButton" name="radioButton_3">
-                   <property name="styleSheet">
-                    <string notr="true">QRadioButton {
-    background-color: transparent;
-    color: #ffffff;
-    
-padding:5px;
-padding-left: 100px;
-    border: none;
-}
-
-QRadioButton::indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    border: 2px solid #ffffff;
-}
-
-QRadioButton::indicator:checked {
-    background-color: #ffffff;
-}
-</string>
-                   </property>
-                   <property name="text">
-                    <string>Never</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="5" column="0" colspan="2">
-                  <widget class="Line" name="line_4">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: &quot;#474748&quot;;</string>
-                   </property>
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="6" column="0">
-                  <widget class="QLabel" name="userInterfaceTitle_3">
-                   <property name="font">
-                    <font>
-                     <family>Sans Serif</family>
-                     <pointsize>16</pointsize>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: transparent;
-color: rgb(255, 255, 255);
-margin-bottom: &quot;10px&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string>Preferences</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="7" column="0">
-                  <widget class="QCheckBox" name="checkBox_3">
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QCheckBox {
-    background-color: transparent; 
-    color: white;
-	margin-left: &quot;40px&quot;;
-   
-}
-
-QCheckBox::indicator {
-    border: 1px solid white; 
-border-radius: 3px;
-    width: 15px; 
-    height: 15px;
-    background-color: transparent;
-}
-
-QCheckBox::indicator:checked {
-    image: url(:/logos/new.png); 
-    background-color: transparent; 
-    border: 1px solid white;
-}
-
-QCheckBox::indicator:unchecked {
-    background-color: transparent;
-    border: 1px solid white;
-}
-</string>
-                   </property>
-                   <property name="text">
-                    <string>Append to log</string>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>5</width>
-                     <height>5</height>
-                    </size>
-                   </property>
-                   <property name="checked">
-                    <bool>false</bool>
-                   </property>
-                   <property name="tristate">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="10" column="0">
-                  <widget class="QLabel" name="label_29">
-                   <property name="font">
-                    <font>
-                     <pointsize>14</pointsize>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: transparent;
-color: rgb(255, 255, 255);
-margin-left: &quot;40px&quot;;
-margin-top: &quot;10px&quot;;</string>
-                   </property>
-                   <property name="text">
-                    <string>Show Balloon</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="0" colspan="2">
-                  <widget class="QCheckBox" name="checkBox_2">
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QCheckBox {
-    background-color: transparent; 
-    color: white;
-	margin-left: &quot;40px&quot;;
-   
-}
-
-QCheckBox::indicator {
-    border: 1px solid white; 
-border-radius: 3px;
-    width: 15px; 
-    height: 15px;
-    background-color: transparent;
-}
-
-QCheckBox::indicator:checked {
-    image: url(:/logos/new.png); 
-    background-color: transparent; 
-    border: 1px solid white;
-}
-
-QCheckBox::indicator:unchecked {
-    background-color: transparent;
-    border: 1px solid white;
-}
-</string>
-                   </property>
-                   <property name="text">
-                    <string>Launch on Windows Startup</string>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>5</width>
-                     <height>5</height>
-                    </size>
-                   </property>
-                   <property name="checked">
-                    <bool>false</bool>
-                   </property>
-                   <property name="tristate">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="13" column="0" colspan="2">
-                  <widget class="QRadioButton" name="radioButton_2">
-                   <property name="styleSheet">
-                    <string notr="true">QRadioButton {
-    background-color: transparent;
-    color: #ffffff;
-    
-padding:5px;
-padding-left: 100px;
-    border: none;
-}
-
-QRadioButton::indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    border: 2px solid #ffffff;
-}
-
-QRadioButton::indicator:checked {
-    background-color: #ffffff;
-}
-</string>
-                   </property>
-                   <property name="text">
-                    <string>On connect/reconnect</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="11" column="0">
-                  <widget class="QRadioButton" name="radioButton">
-                   <property name="styleSheet">
-                    <string notr="true">QRadioButton {
-    background-color: transparent;
-    color: #ffffff;
-    
-padding:5px;
-padding-left: 100px;
-    border: none;
-}
-
-QRadioButton::indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    border: 2px solid #ffffff;
-}
-
-QRadioButton::indicator:checked {
-    background-color: #ffffff;
-}
-</string>
-                   </property>
-                   <property name="text">
-                    <string>On connect</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_11">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>127</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="proxySettingsPage">
-             <layout class="QVBoxLayout" name="verticalLayout_21">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="leftMargin">
-               <number>20</number>
-              </property>
-              <property name="topMargin">
-               <number>9</number>
-              </property>
-              <property name="rightMargin">
-               <number>9</number>
-              </property>
-              <property name="bottomMargin">
-               <number>9</number>
-              </property>
-              <item>
-               <spacer name="verticalSpacer_7">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>68</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QFrame" name="verticalFrame_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>250</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>250</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgba(0, 0, 0,0);
-border:none;</string>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_23">
-                 <item>
-                  <widget class="QRadioButton" name="option1">
-                   <property name="font">
-                    <font>
-                     <pointsize>12</pointsize>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QRadioButton {
-    background-color: transparent;
-    color: #ffffff;
-    padding: 5px;
-    border: none;
-}
-
-QRadioButton::indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    border: 2px solid #ffffff;
-}
-
-QRadioButton::indicator:checked {
-    background-color: #ffffff;
-}
-</string>
-                   </property>
-                   <property name="text">
-                    <string>Default</string>
-                   </property>
-                   <property name="checked">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QRadioButton" name="option2">
-                   <property name="font">
-                    <font>
-                     <pointsize>12</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QRadioButton {
-    background-color: transparent;
-    color: #ffffff;
-    padding: 5px;
-    border: none;
-}
-
-QRadioButton::indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    border: 2px solid #ffffff;
-}
-
-QRadioButton::indicator:checked {
-    background-color: #ffffff;
-}
-</string>
-                   </property>
-                   <property name="text">
-                    <string>Use System Proxy Settings</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QRadioButton" name="man">
-                   <property name="font">
-                    <font>
-                     <pointsize>12</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QRadioButton {
-    background-color: transparent;
-    color: #ffffff;
-    padding: 5px;
-    border: none;
-}
-
-QRadioButton::indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    border: 2px solid #ffffff;
-}
-
-QRadioButton::indicator:checked {
-    background-color: #ffffff;
-}
-</string>
-                   </property>
-                   <property name="text">
-                    <string>Manual Configuration</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <layout class="QGridLayout" name="gridLayout_5">
-                <property name="verticalSpacing">
+                     </property>
+                     <property name="text">
+                      <string>User Interface</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_11">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>127</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="proxySettingsPage">
+               <layout class="QVBoxLayout" name="verticalLayout_21">
+                <property name="spacing">
                  <number>0</number>
                 </property>
-                <item row="0" column="2">
-                 <widget class="QFrame" name="frame_4">
+                <property name="leftMargin">
+                 <number>20</number>
+                </property>
+                <property name="topMargin">
+                 <number>9</number>
+                </property>
+                <property name="rightMargin">
+                 <number>9</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>9</number>
+                </property>
+                <item>
+                 <spacer name="verticalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>68</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QFrame" name="verticalFrame_2">
                   <property name="minimumSize">
                    <size>
-                    <width>400</width>
-                    <height>100</height>
+                    <width>250</width>
+                    <height>0</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>400</width>
-                    <height>100</height>
+                    <width>250</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_23">
+                   <item>
+                    <widget class="QRadioButton" name="option1">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QRadioButton {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 5px;
+    border: none;
+}
+
+QRadioButton::indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #ffffff;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Default</string>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="option2">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QRadioButton {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 5px;
+    border: none;
+}
+
+QRadioButton::indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #ffffff;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Use System Proxy Settings</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="man">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QRadioButton {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 5px;
+    border: none;
+}
+
+QRadioButton::indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #ffffff;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Manual Configuration</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QGridLayout" name="gridLayout_5">
+                  <property name="verticalSpacing">
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="2">
+                   <widget class="QFrame" name="frame_4">
+                    <property name="minimumSize">
+                     <size>
+                      <width>400</width>
+                      <height>100</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>400</width>
+                      <height>100</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgba(0, 0, 0,0);
+border: 2px solid grey</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_4">
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="add">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">color:rgb(255, 255, 255);
+background-color: rgba(0, 0, 0,0);
+border:none;</string>
+                       </property>
+                       <property name="text">
+                        <string>Address</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0" colspan="2">
+                      <widget class="QRadioButton" name="op1">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QRadioButton {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 5px;
+    border: none;
+}
+
+QRadioButton::indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #ffffff;
+}
+</string>
+                       </property>
+                       <property name="text">
+                        <string>HTTP Proxy</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="2" colspan="3">
+                      <widget class="QRadioButton" name="op2">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QRadioButton {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 5px;
+    border: none;
+}
+
+QRadioButton::indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #ffffff;
+}
+</string>
+                       </property>
+                       <property name="text">
+                        <string>SOCKS Proxy</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="3">
+                      <widget class="QLabel" name="port">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:none;</string>
+                       </property>
+                       <property name="text">
+                        <string>Port</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1" colspan="2">
+                      <widget class="QLineEdit" name="add_inp">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>100</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>100</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgba(255, 255, 255,50);</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="4">
+                      <widget class="QLineEdit" name="port_inp">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgba(255, 255, 255,50);</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="5">
+                      <spacer name="horizontalSpacer_5">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>688</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="0" column="3">
+                   <spacer name="horizontalSpacer_3">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::MinimumExpanding</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="0" column="0">
+                   <spacer name="horizontalSpacer_10">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Preferred</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>416</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="advancedSettingsPage">
+               <layout class="QVBoxLayout" name="verticalLayout_25">
+                <item>
+                 <spacer name="verticalSpacer_12">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QFrame" name="frame_5">
+                  <property name="minimumSize">
+                   <size>
+                    <width>450</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>650</width>
+                    <height>16777215</height>
                    </size>
                   </property>
                   <property name="styleSheet">
@@ -2586,589 +2689,448 @@ border:none;</string>
                   <property name="frameShadow">
                    <enum>QFrame::Raised</enum>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_4">
+                  <layout class="QGridLayout" name="gridLayout_7">
+                   <property name="leftMargin">
+                    <number>20</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>5</number>
+                   </property>
+                   <item row="0" column="0" colspan="3">
+                    <widget class="QLabel" name="label_34">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>16</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+                     </property>
+                     <property name="text">
+                      <string>Configuration Files</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="1" column="0">
-                    <widget class="QLabel" name="add">
-                     <property name="enabled">
-                      <bool>true</bool>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
-                     </property>
+                    <widget class="QLabel" name="label_40">
                      <property name="styleSheet">
-                      <string notr="true">color:rgb(255, 255, 255);
-background-color: rgba(0, 0, 0,0);
-border:none;</string>
+                      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
                      </property>
                      <property name="text">
-                      <string>Address</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0" colspan="2">
-                    <widget class="QRadioButton" name="op1">
-                     <property name="enabled">
-                      <bool>true</bool>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QRadioButton {
-    background-color: transparent;
-    color: #ffffff;
-    padding: 5px;
-    border: none;
-}
-
-QRadioButton::indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    border: 2px solid #ffffff;
-}
-
-QRadioButton::indicator:checked {
-    background-color: #ffffff;
-}
-</string>
-                     </property>
-                     <property name="text">
-                      <string>HTTP Proxy</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="2" colspan="3">
-                    <widget class="QRadioButton" name="op2">
-                     <property name="enabled">
-                      <bool>true</bool>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QRadioButton {
-    background-color: transparent;
-    color: #ffffff;
-    padding: 5px;
-    border: none;
-}
-
-QRadioButton::indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    border: 2px solid #ffffff;
-}
-
-QRadioButton::indicator:checked {
-    background-color: #ffffff;
-}
-</string>
-                     </property>
-                     <property name="text">
-                      <string>SOCKS Proxy</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="3">
-                    <widget class="QLabel" name="port">
-                     <property name="enabled">
-                      <bool>true</bool>
-                     </property>
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">background-color: rgba(0, 0, 0,0);
-color: rgb(255, 255, 255);
-border:none;</string>
-                     </property>
-                     <property name="text">
-                      <string>Port</string>
+                      <string>File</string>
                      </property>
                     </widget>
                    </item>
                    <item row="1" column="1" colspan="2">
-                    <widget class="QLineEdit" name="add_inp">
-                     <property name="enabled">
-                      <bool>true</bool>
+                    <widget class="QLineEdit" name="path">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>16777215</height>
+                      </size>
                      </property>
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgba(255, 255, 255,50);</string>
+                      <string notr="true">background-color: rgba(255, 255, 255,50);
+color: rgb(255, 255, 255);</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="4">
-                    <widget class="QLineEdit" name="port_inp">
-                     <property name="enabled">
-                      <bool>true</bool>
-                     </property>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_35">
                      <property name="styleSheet">
-                      <string notr="true">background-color: rgba(255, 255, 255,50);</string>
+                      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+                     </property>
+                     <property name="text">
+                      <string>Extension</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="5">
-                    <spacer name="horizontalSpacer_5">
+                   <item row="2" column="1">
+                    <widget class="QLineEdit" name="path_3">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgba(255, 255, 255,50);
+color: rgb(255, 255, 255);</string>
+                     </property>
+                     <property name="text">
+                      <string>.ovpn</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0" colspan="4">
+                    <widget class="Line" name="line_7">
+                     <property name="font">
+                      <font>
+                       <stylestrategy>PreferDefault</stylestrategy>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: &quot;#474748&quot;;
+
+</string>
+                     </property>
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
                      </property>
-                     <property name="sizeHint" stdset="0">
+                    </widget>
+                   </item>
+                   <item row="4" column="0" colspan="2">
+                    <widget class="QLabel" name="label_39">
+                     <property name="minimumSize">
                       <size>
-                       <width>688</width>
-                       <height>20</height>
+                       <width>0</width>
+                       <height>50</height>
                       </size>
                      </property>
-                    </spacer>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>16</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+                     </property>
+                     <property name="text">
+                      <string>Log Files</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0">
+                    <widget class="QLabel" name="label_38">
+                     <property name="styleSheet">
+                      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+                     </property>
+                     <property name="text">
+                      <string>File</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="1" colspan="2">
+                    <widget class="QLineEdit" name="path_2">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgba(255, 255, 255,50);
+color: rgb(255, 255, 255);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="3">
+                    <widget class="QPushButton" name="browse2">
+                     <property name="minimumSize">
+                      <size>
+                       <width>80</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>20</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(198, 198, 198);</string>
+                     </property>
+                     <property name="text">
+                      <string>Browse</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0" colspan="4">
+                    <widget class="Line" name="line_6">
+                     <property name="font">
+                      <font>
+                       <stylestrategy>PreferDefault</stylestrategy>
+                      </font>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: &quot;#474748&quot;;
+
+</string>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="7" column="0" colspan="2">
+                    <widget class="QLabel" name="label_36">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>16</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Script Timeout</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="8" column="0" colspan="2">
+                    <widget class="QLabel" name="label_30">
+                     <property name="styleSheet">
+                      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+                     </property>
+                     <property name="text">
+                      <string>Preconnect Script Timeout</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="8" column="2">
+                    <widget class="QLineEdit" name="path_4">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgba(255, 255, 255,50);
+color: rgb(255, 255, 255);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="9" column="0" colspan="2">
+                    <widget class="QLabel" name="label_31">
+                     <property name="styleSheet">
+                      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+                     </property>
+                     <property name="text">
+                      <string>Connect script timeout</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="9" column="2">
+                    <widget class="QLineEdit" name="path_5">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgba(255, 255, 255,50);
+color: rgb(255, 255, 255);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="10" column="0" colspan="2">
+                    <widget class="QLabel" name="label_37">
+                     <property name="styleSheet">
+                      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+                     </property>
+                     <property name="text">
+                      <string>Disconnect script timeout</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="10" column="2">
+                    <widget class="QLineEdit" name="path_6">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgba(255, 255, 255,50);
+color: rgb(255, 255, 255);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="3">
+                    <widget class="QPushButton" name="browse1">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(198, 198, 198);</string>
+                     </property>
+                     <property name="text">
+                      <string>Browse</string>
+                     </property>
+                    </widget>
                    </item>
                   </layout>
                  </widget>
                 </item>
-                <item row="0" column="3">
-                 <spacer name="horizontalSpacer_3">
+                <item>
+                 <spacer name="verticalSpacer_13">
                   <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::MinimumExpanding</enum>
+                   <enum>Qt::Vertical</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
                     <width>20</width>
-                    <height>20</height>
+                    <height>312</height>
                    </size>
                   </property>
                  </spacer>
                 </item>
                </layout>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_9">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>416</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="advancedSettingsPage">
-             <layout class="QVBoxLayout" name="verticalLayout_25">
-              <item>
-               <spacer name="verticalSpacer_12">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Fixed</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QFrame" name="frame_5">
-                <property name="minimumSize">
-                 <size>
-                  <width>450</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>650</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgba(0, 0, 0,0);
-border:none;</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_7">
-                 <property name="leftMargin">
-                  <number>20</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <item row="0" column="0" colspan="3">
-                  <widget class="QLabel" name="label_34">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>16</pointsize>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background: transparent;
-color: rgb(255, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string>Configuration Files</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="QLabel" name="label_40">
-                   <property name="styleSheet">
-                    <string notr="true">background: transparent;
-color: rgb(255, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string>File</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="1" colspan="2">
-                  <widget class="QLineEdit" name="path">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgba(255, 255, 255,50);
-color: rgb(255, 255, 255);</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="0">
-                  <widget class="QLabel" name="label_35">
-                   <property name="styleSheet">
-                    <string notr="true">background: transparent;
-color: rgb(255, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string>Extension</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="1">
-                  <widget class="QLineEdit" name="path_3">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgba(255, 255, 255,50);
-color: rgb(255, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string>.ovpn</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="0" colspan="4">
-                  <widget class="Line" name="line_7">
-                   <property name="font">
-                    <font>
-                     <stylestrategy>PreferDefault</stylestrategy>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: &quot;#474748&quot;;
-
-</string>
-                   </property>
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="0" colspan="2">
-                  <widget class="QLabel" name="label_39">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>16</pointsize>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background: transparent;
-color: rgb(255, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string>Log Files</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="5" column="0">
-                  <widget class="QLabel" name="label_38">
-                   <property name="styleSheet">
-                    <string notr="true">background: transparent;
-color: rgb(255, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string>File</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="5" column="1" colspan="2">
-                  <widget class="QLineEdit" name="path_2">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgba(255, 255, 255,50);
-color: rgb(255, 255, 255);</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="5" column="3">
-                  <widget class="QPushButton" name="browse2">
-                   <property name="minimumSize">
-                    <size>
-                     <width>80</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>20</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgb(198, 198, 198);</string>
-                   </property>
-                   <property name="text">
-                    <string>Browse</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="6" column="0" colspan="4">
-                  <widget class="Line" name="line_6">
-                   <property name="font">
-                    <font>
-                     <stylestrategy>PreferDefault</stylestrategy>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: &quot;#474748&quot;;
-
-</string>
-                   </property>
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="7" column="0" colspan="2">
-                  <widget class="QLabel" name="label_36">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>50</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>16</pointsize>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background: transparent;
-color: rgb(255, 255, 255);
-</string>
-                   </property>
-                   <property name="text">
-                    <string>Script Timeout</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="8" column="0" colspan="2">
-                  <widget class="QLabel" name="label_30">
-                   <property name="styleSheet">
-                    <string notr="true">background: transparent;
-color: rgb(255, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string>Preconnect Script Timeout</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="8" column="2">
-                  <widget class="QLineEdit" name="path_4">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgba(255, 255, 255,50);
-color: rgb(255, 255, 255);</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="9" column="0" colspan="2">
-                  <widget class="QLabel" name="label_31">
-                   <property name="styleSheet">
-                    <string notr="true">background: transparent;
-color: rgb(255, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string>Connect script timeout</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="9" column="2">
-                  <widget class="QLineEdit" name="path_5">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgba(255, 255, 255,50);
-color: rgb(255, 255, 255);</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="10" column="0" colspan="2">
-                  <widget class="QLabel" name="label_37">
-                   <property name="styleSheet">
-                    <string notr="true">background: transparent;
-color: rgb(255, 255, 255);</string>
-                   </property>
-                   <property name="text">
-                    <string>Disconnect script timeout</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="10" column="2">
-                  <widget class="QLineEdit" name="path_6">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgba(255, 255, 255,50);
-color: rgb(255, 255, 255);</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="3">
-                  <widget class="QPushButton" name="browse1">
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgb(198, 198, 198);</string>
-                   </property>
-                   <property name="text">
-                    <string>Browse</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_13">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>312</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
-            </widget>
-           </widget>
+              </widget>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="profilePage">
-       <widget class="QLabel" name="label_19">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>270</y>
-          <width>66</width>
-          <height>18</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Ptfile Page</string>
-        </property>
-       </widget>
-      </widget>
       <widget class="QWidget" name="aboutusPage">
-       <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="0">
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
+       <layout class="QVBoxLayout" name="verticalLayout_27">
+        <property name="leftMargin">
+         <number>25</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="headerLabel_3">
+          <property name="minimumSize">
            <size>
-            <width>20</width>
-            <height>30</height>
+            <width>0</width>
+            <height>40</height>
            </size>
           </property>
-         </spacer>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_18">
+             <property name="font">
+              <font>
+               <pointsize>20</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>ABOUT US</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="serverHeading_2">
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(0, 0, 0,0);
+border: none;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>70</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_43">
+             <property name="font">
+              <font>
+               <pointsize>13</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(98, 194, 205);
+</string>
+             </property>
+             <property name="text">
+              <string>Q-SLEEVE</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_44">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(192, 191, 188)</string>
+             </property>
+             <property name="text">
+              <string>Gateway to Quantum Security</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
-        <item row="1" column="0">
+        <item>
          <layout class="QHBoxLayout" name="infoContainerLayout">
+          <property name="leftMargin">
+           <number>8</number>
+          </property>
           <property name="topMargin">
            <number>0</number>
           </property>
@@ -3176,160 +3138,326 @@ color: rgb(255, 255, 255);</string>
            <number>0</number>
           </property>
           <item>
-           <spacer name="InfohorizontalSpacerLeft">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>30</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <widget class="QFrame" name="infoContainer">
-            <property name="sizeIncrement">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
+           <widget class="QTextEdit" name="textEdit">
             <property name="styleSheet">
-             <string notr="true">background-color: &quot;#545759&quot;;
+             <string notr="true">background-color: rgba(0, 0, 0,0);
 color: rgb(255, 255, 255);
-border-radius: &quot;20px&quot;;
-</string>
+border:none;
+padding 10px;</string>
             </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
             </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
             </property>
-            <layout class="QGridLayout" name="gridLayout_9">
-             <property name="leftMargin">
-              <number>15</number>
-             </property>
-             <property name="topMargin">
-              <number>15</number>
-             </property>
-             <property name="rightMargin">
-              <number>15</number>
-             </property>
-             <property name="bottomMargin">
-              <number>15</number>
-             </property>
-             <property name="spacing">
-              <number>15</number>
-             </property>
-             <item row="3" column="0" alignment="Qt::AlignRight">
-              <widget class="QLabel" name="quantumLogoInfo">
-               <property name="minimumSize">
-                <size>
-                 <width>90</width>
-                 <height>90</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>90</width>
-                 <height>90</height>
-                </size>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: transparent;
-border: 2px solid transparent;
-outline: none;
-</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="pixmap">
-                <pixmap>../Desktop/admin_gui/images/qaig_logo.png</pixmap>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="infoDescription">
-               <property name="font">
-                <font>
-                 <family>Sans Serif</family>
-                </font>
-               </property>
-               <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;OpenVPN GUIv11.15、0.0 -A Windows GUI for OpenVPN&lt;br/&gt;Copyright (C) 2004-2005 Mathias Sundman &amp;lt;info@openvpn.se&amp;gt; &lt;br/&gt;Copyright (C) 2008-2014 Heiko Hund &amp;lt;heikoh@users.sf.net&amp;gt;&lt;br/&gt;Copyright (C)2012-2018 OpenVPN GUI contributors &lt;br/&gt;https://github.com/OpenVPN/openvpn-gui/ &lt;br/&gt;&lt;br/&gt;OpenVPN-An application to securely tunnel lP networks over a single CP/UDP port with support for SSL/TLS-based session authentic ation and key exchange. packet encryption, packet authentication. and packet compression.&lt;br/&gt;Copyright (C) 2002-2018 OpenVPN Technologies. Inc &amp;lt;info@openvpn.net&amp;gt; https://openvpn.net&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="infoTitle">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>50</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Sans Serif</family>
-                 <pointsize>15</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>About Us</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+            <property name="html">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;OpenVPN GUIv11.15、0.0 -A Windows GUI for OpenVPN&lt;br /&gt;Copyright (C) 2004-2005 Mathias Sundman &amp;lt;info@openvpn.se&amp;gt; &lt;br /&gt;Copyright (C) 2008-2014 Heiko Hund &amp;lt;heikoh@users.sf.net&amp;gt;&lt;br /&gt;Copyright (C)2012-2018 OpenVPN GUI contributors &lt;br /&gt;https://github.com/OpenVPN/openvpn-gui/ &lt;br /&gt;&lt;br /&gt;OpenVPN-An application to securely tunnel lP networks over a single CP/UDP port with support for SSL/TLS-based session authentic ation and key exchange. packet encryption, packet authentication. and packet compression.&lt;br /&gt;Copyright (C) 2002-2018 OpenVPN Technologies. Inc &amp;lt;info@openvpn.net&amp;gt; https://openvpn.net&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;OpenVPN GUIv11.15、0.0 -A Windows GUI for OpenVPN&lt;br /&gt;Copyright (C) 2004-2005 Mathias Sundman &amp;lt;info@openvpn.se&amp;gt; &lt;br /&gt;Copyright (C) 2008-2014 Heiko Hund &amp;lt;heikoh@users.sf.net&amp;gt;&lt;br /&gt;Copyright (C)2012-2018 OpenVPN GUI contributors &lt;br /&gt;https://github.com/OpenVPN/openvpn-gui/ &lt;br /&gt;&lt;br /&gt;OpenVPN-An application to securely tunnel lP networks over a single CP/UDP port with support for SSL/TLS-based session authentic ation and key exchange. packet encryption, packet authentication. and packet compression.&lt;br /&gt;Copyright (C) 2002-2018 OpenVPN Technologies. Inc &amp;lt;info@openvpn.net&amp;gt; https://openvpn.net&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;OpenVPN GUIv11.15、0.0 -A Windows GUI for OpenVPN&lt;br /&gt;Copyright (C) 2004-2005 Mathias Sundman &amp;lt;info@openvpn.se&amp;gt; &lt;br /&gt;Copyright (C) 2008-2014 Heiko Hund &amp;lt;heikoh@users.sf.net&amp;gt;&lt;br /&gt;Copyright (C)2012-2018 OpenVPN GUI contributors &lt;br /&gt;https://github.com/OpenVPN/openvpn-gui/ &lt;br /&gt;&lt;br /&gt;OpenVPN-An application to securely tunnel lP networks over a single CP/UDP port with support for SSL/TLS-based session authentic ation and key exchange. packet encryption, packet authentication. and packet compression.&lt;br /&gt;Copyright (C) 2002-2018 OpenVPN Technologies. Inc &amp;lt;info@openvpn.net&amp;gt; https://openvpn.net&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
            </widget>
-          </item>
-          <item>
-           <spacer name="InfohorizontalSpacerRight">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>30</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </item>
-        <item row="2" column="0">
-         <spacer name="verticalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
+       </layout>
+      </widget>
+      <widget class="QWidget" name="usersPage">
+       <layout class="QVBoxLayout" name="verticalLayout_28">
+        <property name="leftMargin">
+         <number>25</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="headerLabel_4">
+          <property name="minimumSize">
            <size>
-            <width>20</width>
-            <height>30</height>
+            <width>0</width>
+            <height>40</height>
            </size>
           </property>
-         </spacer>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="serverHeading_3">
+             <property name="font">
+              <font>
+               <family>Ubuntu Sans</family>
+               <pointsize>20</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(0, 0, 0,0);
+border: none;</string>
+             </property>
+             <property name="text">
+              <string>CURRENT USERS</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="addUserBtn">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(198, 198, 198);</string>
+             </property>
+             <property name="text">
+              <string>Add user</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>70</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_45">
+             <property name="font">
+              <font>
+               <pointsize>13</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(98, 194, 205);
+</string>
+             </property>
+             <property name="text">
+              <string>Q-SLEEVE</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_46">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(192, 191, 188)</string>
+             </property>
+             <property name="text">
+              <string>Gateway to Quantum Security</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="header">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;
+padding:5px;
+</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QCheckBox" name="mainCheckBox">
+             <property name="styleSheet">
+              <string notr="true">QCheckBox {
+    background-color: transparent; 
+    color: white;
+	margin-left: &quot;10px&quot;;
+   
+}
+
+QCheckBox::indicator {
+    border: 1px solid white; 
+border-radius: 3px;
+    width: 15px; 
+    height: 15px;
+    background-color: transparent;
+}
+
+QCheckBox::indicator:checked {
+    image: url(:/logos/new.png); 
+    background-color: transparent; 
+    border: 1px solid white;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: transparent;
+    border: 1px solid white;
+}
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="name">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:none;
+padding-left: 5px;
+padding-right:5px;</string>
+             </property>
+             <property name="text">
+              <string>NAME</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="ip_address">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:none;</string>
+             </property>
+             <property name="text">
+              <string>IP ADDRESS</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="status">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:none;</string>
+             </property>
+             <property name="text">
+              <string>STATUS</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="connec_time">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(0, 0, 0,0);
+color: rgb(255, 255, 255);
+border:none;</string>
+             </property>
+             <property name="text">
+              <string>CONNECTED TIME</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="deleteBtn">
+             <property name="minimumSize">
+              <size>
+               <width>10</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/logos/Delete.png</normaloff>:/logos/Delete.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="mainBody">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(0, 0, 0,0);
+border:none;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_30"/>
+         </widget>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="usersPage"/>
       <widget class="QWidget" name="configurationPage">
        <layout class="QVBoxLayout" name="verticalLayout_26">
         <property name="spacing">
          <number>20</number>
         </property>
         <property name="leftMargin">
-         <number>20</number>
+         <number>25</number>
         </property>
         <property name="topMargin">
          <number>10</number>
@@ -3363,7 +3491,7 @@ border:none;</string>
             <widget class="QLabel" name="serverHeading">
              <property name="font">
               <font>
-               <pointsize>15</pointsize>
+               <pointsize>20</pointsize>
                <bold>true</bold>
               </font>
              </property>
@@ -3373,7 +3501,7 @@ background-color: rgba(0, 0, 0,0);
 border: none;</string>
              </property>
              <property name="text">
-              <string>Server Configuration</string>
+              <string>SERVER CONFIGURATION</string>
              </property>
             </widget>
            </item>
@@ -3439,7 +3567,9 @@ border: none;</string>
           <property name="styleSheet">
            <string notr="true">background-color: rgba(0, 0, 0,0);
 border:none;
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+padding-left: 30px;
+padding-right: 50px;</string>
           </property>
           <property name="frameShadow">
            <enum>QFrame::Sunken</enum>

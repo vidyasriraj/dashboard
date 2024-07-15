@@ -10,11 +10,13 @@ CONFIG += c++17
 SOURCES += \
     customDelegate.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    users.cpp
 
 HEADERS += \
     customDelegate.h \
-    mainwindow.h
+    mainwindow.h \
+    users.h
 
 FORMS += \
     mainwindow.ui

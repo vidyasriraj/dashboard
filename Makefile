@@ -54,13 +54,17 @@ OBJECTS_DIR   = ./
 
 SOURCES       = customDelegate.cpp \
 		main.cpp \
-		mainwindow.cpp qrc_resources.cpp \
-		moc_mainwindow.cpp
+		mainwindow.cpp \
+		users.cpp qrc_resources.cpp \
+		moc_mainwindow.cpp \
+		moc_users.cpp
 OBJECTS       = customDelegate.o \
 		main.o \
 		mainwindow.o \
+		users.o \
 		qrc_resources.o \
-		moc_mainwindow.o
+		moc_mainwindow.o \
+		moc_users.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -145,9 +149,11 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		dashboard.pro customDelegate.h \
-		mainwindow.h customDelegate.cpp \
+		mainwindow.h \
+		users.h customDelegate.cpp \
 		main.cpp \
-		mainwindow.cpp
+		mainwindow.cpp \
+		users.cpp
 QMAKE_TARGET  = dashboard
 DESTDIR       = 
 TARGET        = dashboard
@@ -346,8 +352,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents resources.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents customDelegate.h mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents customDelegate.cpp main.cpp mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents customDelegate.h mainwindow.h users.h $(DISTDIR)/
+	$(COPY_FILE) --parents customDelegate.cpp main.cpp mainwindow.cpp users.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
 
@@ -380,6 +386,7 @@ qrc_resources.cpp: resources.qrc \
 		map.qml \
 		config.txt \
 		Time\ Machine.png \
+		act.png \
 		Download.png \
 		red.png \
 		upload.png \
@@ -388,7 +395,9 @@ qrc_resources.cpp: resources.qrc \
 		Menu.png \
 		marker.png \
 		config.png \
+		qaiglogo.png \
 		Settings.png \
+		inact.png \
 		connected_icon.png \
 		connect_icon.png \
 		green.png \
@@ -398,7 +407,8 @@ qrc_resources.cpp: resources.qrc \
 		Logout.png \
 		new.png \
 		Control\ Panel.png \
-		About.png
+		About.png \
+		Delete.png
 	/usr/lib/qt5/bin/rcc -name resources resources.qrc -o qrc_resources.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
@@ -407,13 +417,19 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -pipe -O2 -std=gnu++1z -Wall -Wextra -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_users.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_users.cpp
 moc_mainwindow.cpp: mainwindow.h \
+		users.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/vidya/dashboard/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/vidya/dashboard -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQmlModels -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+
+moc_users.cpp: users.h \
+		moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/vidya/dashboard/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/vidya/dashboard -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtQuick -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtQmlModels -I/usr/include/x86_64-linux-gnu/qt5/QtQml -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include users.h -o moc_users.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -440,19 +456,28 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 customDelegate.o: customDelegate.cpp customDelegate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o customDelegate.o customDelegate.cpp
 
-main.o: main.cpp mainwindow.h
+main.o: main.cpp mainwindow.h \
+		users.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
+		users.h \
 		ui_mainwindow.h \
 		customDelegate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
+
+users.o: users.cpp users.h \
+		customDelegate.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o users.o users.cpp
 
 qrc_resources.o: qrc_resources.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resources.o qrc_resources.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
+
+moc_users.o: moc_users.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_users.o moc_users.cpp
 
 ####### Install
 

@@ -20,6 +20,10 @@
         <file>Computer Support.png</file>
         <file>People.png</file>
         <file>config.png</file>
+        <file>act.png</file>
+        <file>Delete.png</file>
+        <file>qaiglogo.png</file>
+        <file>inact.png</file>
     </qresource>
     <qresource prefix="/">
         <file>map.qml</file>
