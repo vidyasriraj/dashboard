@@ -20,10 +20,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setDashboardPage();
+    ui->connectsym->setCheckable(true);
     ui->sidebar_2->hide();
 
     ui->connectIcon->setIcon(QIcon(":/logos/connect_icon.png"));
-    ui->connectsym->setPixmap(QPixmap(":/logos/red.png"));
+    ui->connectsym->setIcon(QIcon(":/logos/red.png"));
     ui->mapWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
     ui->mapWidget->setSource(QUrl(QStringLiteral("qrc:/map.qml")));
 
@@ -123,15 +124,15 @@ void MainWindow::on_connectIcon_clicked()
     QPixmap newPixmap = setPixmapOpacity(pixmap, opacity);
     QPixmap newPixmap2 = setPixmapOpacity(pixmap2, 1);
     ui->connectIcon->setIcon(QIcon(newPixmap));
-    ui->connectsym->setPixmap(newPixmap2);
+    ui->connectsym->setIcon(QIcon(newPixmap2));
 
     for (int i = 0; i <= 7; ++i) {
         QTimer::singleShot(60 * i, this, [this, pixmap, opacity, i]() {
             setConnectedIcon(pixmap, opacity + 0.1 * i);
         });
     }
-    ui->connectText->setText(connectText);
-    ui->connectText->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+    ui->connectsym->setText(connectText);
+
 
 }
 
@@ -176,6 +177,7 @@ void MainWindow::setDashboardPage()
 {
     ui->menu_1->setEnabled(true);
     setViewPage(0,ui->dashboardButton);
+    details_box_update();
 }
 
 
@@ -310,14 +312,16 @@ void MainWindow::on_browse1_clicked()
 
 void MainWindow::value_read()
 {
-    QMap<QString, QString> keyValuePairs = readKeyValuePairsFromFile(":/config.txt");
+    QMap<QString, QString> keyValuePairs = readKeyValuePairsFromFile("/home/vidya/Downloads/server.ovpn");
     ui->table->setRowCount(keyValuePairs.size());
     ui->table->setColumnCount(2);
+    ui->table->setRowCount(8);
     ui->table->horizontalHeader()->setVisible(false);
     ui->table->verticalHeader()->setVisible(false);
     ui->table->setSelectionMode(QAbstractItemView::NoSelection);
     ui->table->setFocusPolicy(Qt::NoFocus);
-
+    ui->table->setColumnWidth(0, 390);
+    ui->table->setColumnWidth(1,160);
     // Remove row numbers
     ui->table->setVerticalHeader(nullptr);
     ui->table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -331,13 +335,18 @@ void MainWindow::value_read()
         QTableWidgetItem *keyItem = new QTableWidgetItem(it.key());
         QTableWidgetItem *valueItem = new QTableWidgetItem(it.value());
 
-        ui->table->setItem(row, 0, keyItem);
-        ui->table->setColumnWidth(0, 390);
-        ui->table->setItem(row, 1, valueItem);
-        ui->table->setColumnWidth(1,160);
-        keyItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-        valueItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
+
+        if(keyItem->text() == ";max-clients" ){
+            ui->table->setItem(1, 1, valueItem);
+
+        }
+        if(keyItem->text() == "proto" ){
+            ui->table->setItem(6, 1, valueItem);
+        }
+        if(keyItem->text() == "port" ){
+            ui->table->setItem(5, 1, valueItem);
+        }
         row++;
         ui->table->setRowHeight(row, 60);
     }
@@ -346,6 +355,26 @@ void MainWindow::value_read()
 
 }
 
+void MainWindow::details_box_update(){
+
+    QMap<QString, QString> keyValuePairs = readKeyValuePairsFromFile("/home/vidya/Downloads/server.ovpn");
+    for (auto it = keyValuePairs.cbegin(); it != keyValuePairs.cend(); it++) {
+        QTableWidgetItem *keyItem = new QTableWidgetItem(it.key());
+        QTableWidgetItem *valueItem = new QTableWidgetItem(it.value());
+        qDebug()<<keyItem->text()<<valueItem->text();
+        if(keyItem->text() == "ecdh-curve" && valueItem->text() == "kyber1024"){
+            ui->algo_name->setText("KYBER 1024 HYBRID");
+        }
+        if(ui->algo_name->text()=="KYBER 1024 HYBRID" &&  ui->cert_name->text()== "DILITHIUM 3"){
+            ui->quantum_secure_value->setText("TRUE");
+        }
+        else{
+            ui->quantum_secure_value->setText("FALSE");
+        }
+
+
+}
+}
 
 void MainWindow::setConfigurationPage()
 {
@@ -443,6 +472,7 @@ void MainWindow::setUsersPage()
     setViewPage(4,ui->usersButton);
     ui->menu_1->setEnabled(false);
 }
+
 
 
 

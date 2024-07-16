@@ -82,7 +82,7 @@ private slots:
         QTextStream in(&file);
         while (!in.atEnd()) {
             QString line = in.readLine();
-            QStringList parts = line.split("=");
+            QStringList parts = line.split(" ");
             if (parts.size() == 2) {
                 keyValuePairs.insert(parts[0].trimmed(), parts[1].trimmed());
             }
@@ -100,6 +100,8 @@ private slots:
     void setConfigurationPage();
 
     void setUsersPage();
+
+    void details_box_update();
 
 
 

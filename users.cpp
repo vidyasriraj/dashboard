@@ -106,15 +106,10 @@ void Users::addUser(const QString &name, const QString &ip, QLabel *status, cons
         msgBox.setWindowTitle("Delete User");
         msgBox.setText("Are you sure you want to delete this user?");
         msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-        QSize msgBoxSize = msgBox.sizeHint();
+
         QRect parentRect = tableWidget->geometry();
-        int x = parentRect.left() + (parentRect.width() - msgBoxSize.width()) / 2;
-        int y = parentRect.top() + (parentRect.height() - msgBoxSize.height()) / 2;
-        msgBox.move(x, y);
-
-
-        // Move the message box to the center of the parent window
-        msgBox.move(x, y);
+        QPoint x = parentRect.center() ;
+        msgBox.move(x);
 
         // Apply black color stylesheet
         msgBox.setStyleSheet(
