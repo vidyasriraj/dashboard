@@ -20,15 +20,17 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setDashboardPage();
-    ui->connectsym->setCheckable(true);
+    ui->connectsym->setCheckable(false);
     ui->sidebar_2->hide();
 
     ui->connectIcon->setIcon(QIcon(":/logos/connect_icon.png"));
     ui->connectsym->setIcon(QIcon(":/logos/red.png"));
     ui->mapWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
+
+    // Set the source of the QQuickWidget to the QML file
     ui->mapWidget->setSource(QUrl(QStringLiteral("qrc:/map.qml")));
 
-    connect(ui->connectIcon, SIGNAL(clicked(bool)), this, SLOT(on_connectIcon_clicked()));
+    connect(ui->connectIcon, SIGNAL(clicked(bool)), this, SLOT(clickConnect()));
 
 
     connect(ui->menu, SIGNAL(clicked()), this, SLOT(setSidebar()));
@@ -104,7 +106,7 @@ void MainWindow::setConnectedIcon(const QPixmap &pixmap, qreal opacity) {
 // method to establish connection with the server
 
 
-void MainWindow::on_connectIcon_clicked()
+void MainWindow::clickConnect()
 {
     QPixmap pixmap,pixmap2;
 
@@ -132,6 +134,7 @@ void MainWindow::on_connectIcon_clicked()
         });
     }
     ui->connectsym->setText(connectText);
+    qDebug()<<"clicked";
 
 
 }
@@ -363,9 +366,12 @@ void MainWindow::details_box_update(){
         QTableWidgetItem *valueItem = new QTableWidgetItem(it.value());
         qDebug()<<keyItem->text()<<valueItem->text();
         if(keyItem->text() == "ecdh-curve" && valueItem->text() == "kyber1024"){
+            ui->algo_name->setText("KYBER 1024");
+        }
+        if(keyItem->text() == "ecdh-curve" && valueItem->text() == "p521kyber1024"){
             ui->algo_name->setText("KYBER 1024 HYBRID");
         }
-        if(ui->algo_name->text()=="KYBER 1024 HYBRID" &&  ui->cert_name->text()== "DILITHIUM 3"){
+        if(ui->algo_name->text()=="KYBER 1024" &&  ui->cert_name->text()== "DILITHIUM 3"){
             ui->quantum_secure_value->setText("TRUE");
         }
         else{

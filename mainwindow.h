@@ -38,7 +38,7 @@ public:
 
 private slots:
 
-    void on_connectIcon_clicked();
+    void clickConnect();
     void setConnectedIcon(const QPixmap &pixmap, qreal opacity);
     void setViewPage(int index, QPushButton *clickedButton);
     void setSettings(int index, QPushButton *clickedButton);

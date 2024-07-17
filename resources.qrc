@@ -28,5 +28,6 @@
     <qresource prefix="/">
         <file>map.qml</file>
         <file>config.txt</file>
+        <file>mapCustomize.html</file>
     </qresource>
 </RCC>
