@@ -48,7 +48,7 @@ import QtWebEngine 1.8
 
 Rectangle {
     width: 800
-    height: 600
+    height: 700
 
     WebEngineView {
         id: webView

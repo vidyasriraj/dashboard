@@ -25,9 +25,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->connectIcon->setIcon(QIcon(":/logos/connect_icon.png"));
     ui->connectsym->setIcon(QIcon(":/logos/red.png"));
-    ui->mapWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
 
-    // Set the source of the QQuickWidget to the QML file
+    // Load the QML file into the QQuickWidget
     ui->mapWidget->setSource(QUrl(QStringLiteral("qrc:/map.qml")));
 
     connect(ui->connectIcon, SIGNAL(clicked(bool)), this, SLOT(clickConnect()));
@@ -45,6 +44,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     connect(ui->configButton, &QPushButton::clicked, this, &MainWindow::value_read);
+
     applyBlurEffect(ui->op1, true);
     applyBlurEffect(ui->op2, true);
     ui->op1->setEnabled(false);
@@ -62,9 +62,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->generalButton, SIGNAL(clicked()), this, SLOT(setGeneralSettings()));
     connect(ui->proxyButton, SIGNAL(clicked()), this, SLOT(setProxySettings()));
     connect(ui->advancedButton, SIGNAL(clicked()), this, SLOT(setAdvancedSettings()));
+    connect(ui->configButtonSettings, SIGNAL(clicked()), this, SLOT(configSettings()));
 
-    connect(ui->browse1, SIGNAL(clicked()), this, SLOT(on_browse1_clicked()));
-    connect(ui->browse2, SIGNAL(clicked()), this, SLOT(on_browse2_clicked()));
+
+    connect(ui->browse1, SIGNAL(clicked()), this, SLOT(setovpnFile()));
+    connect(ui->browse2, SIGNAL(clicked()), this, SLOT(setlogsFile()));
 
 
     currentUsers = new Users(this);
@@ -112,12 +114,12 @@ void MainWindow::clickConnect()
 
     QString connectText;
     if (ui->connectIcon->isChecked()) {
-        connectText = "Connected";
+        connectText = " Connected";
         pixmap = QPixmap(":/logos/connected_icon.png");
         pixmap2 = QPixmap(":/logos/green.png");
 
     } else {
-        connectText = "Disconnected";
+        connectText = "  Disconnected";
         pixmap = QPixmap(":/logos/connect_icon.png");
         pixmap2 = QPixmap(":/logos/red.png");
     }
@@ -180,7 +182,10 @@ void MainWindow::setDashboardPage()
 {
     ui->menu_1->setEnabled(true);
     setViewPage(0,ui->dashboardButton);
+    ui->sidebar_2->hide();
     details_box_update();
+    ui->sidebar->show();
+
 }
 
 
@@ -255,7 +260,7 @@ void MainWindow::on_man_toggled(bool checked)
 }
 
 
-void MainWindow::on_browse2_clicked()
+void MainWindow::setlogsFile()
 {
     QFileDialog fileDialog(this, "Select .ovpn File");
 
@@ -284,7 +289,7 @@ void MainWindow::on_browse2_clicked()
 }
 
 
-void MainWindow::on_browse1_clicked()
+void MainWindow::setovpnFile()
 {
     QFileDialog fileDialog(this, "Select .ovpn File");
 
@@ -481,5 +486,12 @@ void MainWindow::setUsersPage()
 
 
 
+
+
+
+void MainWindow::configSettings()
+{
+    setSettings(3,ui->configButtonSettings);
+}
 
 

@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[43];
-    char stringdata0[580];
+    QByteArrayData data[44];
+    char stringdata0[581];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -58,23 +58,24 @@ QT_MOC_LITERAL(22, 276, 15), // "applyBlurEffect"
 QT_MOC_LITERAL(23, 292, 8), // "QWidget*"
 QT_MOC_LITERAL(24, 301, 6), // "widget"
 QT_MOC_LITERAL(25, 308, 5), // "apply"
-QT_MOC_LITERAL(26, 314, 18), // "on_browse2_clicked"
-QT_MOC_LITERAL(27, 333, 18), // "on_browse1_clicked"
-QT_MOC_LITERAL(28, 352, 25), // "readKeyValuePairsFromFile"
-QT_MOC_LITERAL(29, 378, 21), // "QMap<QString,QString>"
-QT_MOC_LITERAL(30, 400, 8), // "filePath"
-QT_MOC_LITERAL(31, 409, 10), // "value_read"
-QT_MOC_LITERAL(32, 420, 7), // "addUser"
-QT_MOC_LITERAL(33, 428, 17), // "handleDeletedUser"
-QT_MOC_LITERAL(34, 446, 4), // "name"
-QT_MOC_LITERAL(35, 451, 2), // "ip"
-QT_MOC_LITERAL(36, 454, 13), // "connectedTime"
-QT_MOC_LITERAL(37, 468, 17), // "processCheckBoxes"
-QT_MOC_LITERAL(38, 486, 21), // "onMainCheckBoxToggled"
-QT_MOC_LITERAL(39, 508, 18), // "updateMainCheckBox"
-QT_MOC_LITERAL(40, 527, 20), // "setConfigurationPage"
-QT_MOC_LITERAL(41, 548, 12), // "setUsersPage"
-QT_MOC_LITERAL(42, 561, 18) // "details_box_update"
+QT_MOC_LITERAL(26, 314, 11), // "setovpnFile"
+QT_MOC_LITERAL(27, 326, 11), // "setlogsFile"
+QT_MOC_LITERAL(28, 338, 25), // "readKeyValuePairsFromFile"
+QT_MOC_LITERAL(29, 364, 21), // "QMap<QString,QString>"
+QT_MOC_LITERAL(30, 386, 8), // "filePath"
+QT_MOC_LITERAL(31, 395, 10), // "value_read"
+QT_MOC_LITERAL(32, 406, 7), // "addUser"
+QT_MOC_LITERAL(33, 414, 17), // "handleDeletedUser"
+QT_MOC_LITERAL(34, 432, 4), // "name"
+QT_MOC_LITERAL(35, 437, 2), // "ip"
+QT_MOC_LITERAL(36, 440, 13), // "connectedTime"
+QT_MOC_LITERAL(37, 454, 17), // "processCheckBoxes"
+QT_MOC_LITERAL(38, 472, 21), // "onMainCheckBoxToggled"
+QT_MOC_LITERAL(39, 494, 18), // "updateMainCheckBox"
+QT_MOC_LITERAL(40, 513, 20), // "setConfigurationPage"
+QT_MOC_LITERAL(41, 534, 12), // "setUsersPage"
+QT_MOC_LITERAL(42, 547, 18), // "details_box_update"
+QT_MOC_LITERAL(43, 566, 14) // "configSettings"
 
     },
     "MainWindow\0clickConnect\0\0setConnectedIcon\0"
@@ -85,14 +86,14 @@ QT_MOC_LITERAL(42, 561, 18) // "details_box_update"
     "setAboutUsPage\0setGeneralSettings\0"
     "setProxySettings\0setAdvancedSettings\0"
     "on_man_toggled\0checked\0applyBlurEffect\0"
-    "QWidget*\0widget\0apply\0on_browse2_clicked\0"
-    "on_browse1_clicked\0readKeyValuePairsFromFile\0"
+    "QWidget*\0widget\0apply\0setovpnFile\0"
+    "setlogsFile\0readKeyValuePairsFromFile\0"
     "QMap<QString,QString>\0filePath\0"
     "value_read\0addUser\0handleDeletedUser\0"
     "name\0ip\0connectedTime\0processCheckBoxes\0"
     "onMainCheckBoxToggled\0updateMainCheckBox\0"
     "setConfigurationPage\0setUsersPage\0"
-    "details_box_update"
+    "details_box_update\0configSettings"
 };
 #undef QT_MOC_LITERAL
 
@@ -102,7 +103,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      27,   14, // methods
+      28,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -110,33 +111,34 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  149,    2, 0x08 /* Private */,
-       3,    2,  150,    2, 0x08 /* Private */,
-       6,    2,  155,    2, 0x08 /* Private */,
-      10,    2,  160,    2, 0x08 /* Private */,
-      11,    0,  165,    2, 0x08 /* Private */,
-      12,    0,  166,    2, 0x08 /* Private */,
-      13,    0,  167,    2, 0x08 /* Private */,
-      14,    0,  168,    2, 0x08 /* Private */,
-      15,    0,  169,    2, 0x08 /* Private */,
-      16,    0,  170,    2, 0x08 /* Private */,
-      17,    0,  171,    2, 0x08 /* Private */,
-      18,    0,  172,    2, 0x08 /* Private */,
-      19,    0,  173,    2, 0x08 /* Private */,
-      20,    1,  174,    2, 0x08 /* Private */,
-      22,    2,  177,    2, 0x08 /* Private */,
-      26,    0,  182,    2, 0x08 /* Private */,
-      27,    0,  183,    2, 0x08 /* Private */,
-      28,    1,  184,    2, 0x08 /* Private */,
-      31,    0,  187,    2, 0x08 /* Private */,
-      32,    0,  188,    2, 0x08 /* Private */,
-      33,    3,  189,    2, 0x08 /* Private */,
-      37,    0,  196,    2, 0x08 /* Private */,
-      38,    1,  197,    2, 0x08 /* Private */,
-      39,    0,  200,    2, 0x08 /* Private */,
-      40,    0,  201,    2, 0x08 /* Private */,
-      41,    0,  202,    2, 0x08 /* Private */,
-      42,    0,  203,    2, 0x08 /* Private */,
+       1,    0,  154,    2, 0x08 /* Private */,
+       3,    2,  155,    2, 0x08 /* Private */,
+       6,    2,  160,    2, 0x08 /* Private */,
+      10,    2,  165,    2, 0x08 /* Private */,
+      11,    0,  170,    2, 0x08 /* Private */,
+      12,    0,  171,    2, 0x08 /* Private */,
+      13,    0,  172,    2, 0x08 /* Private */,
+      14,    0,  173,    2, 0x08 /* Private */,
+      15,    0,  174,    2, 0x08 /* Private */,
+      16,    0,  175,    2, 0x08 /* Private */,
+      17,    0,  176,    2, 0x08 /* Private */,
+      18,    0,  177,    2, 0x08 /* Private */,
+      19,    0,  178,    2, 0x08 /* Private */,
+      20,    1,  179,    2, 0x08 /* Private */,
+      22,    2,  182,    2, 0x08 /* Private */,
+      26,    0,  187,    2, 0x08 /* Private */,
+      27,    0,  188,    2, 0x08 /* Private */,
+      28,    1,  189,    2, 0x08 /* Private */,
+      31,    0,  192,    2, 0x08 /* Private */,
+      32,    0,  193,    2, 0x08 /* Private */,
+      33,    3,  194,    2, 0x08 /* Private */,
+      37,    0,  201,    2, 0x08 /* Private */,
+      38,    1,  202,    2, 0x08 /* Private */,
+      39,    0,  205,    2, 0x08 /* Private */,
+      40,    0,  206,    2, 0x08 /* Private */,
+      41,    0,  207,    2, 0x08 /* Private */,
+      42,    0,  208,    2, 0x08 /* Private */,
+      43,    0,  209,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -166,6 +168,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -191,8 +194,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 12: _t->setAdvancedSettings(); break;
         case 13: _t->on_man_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 14: _t->applyBlurEffect((*reinterpret_cast< QWidget*(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
-        case 15: _t->on_browse2_clicked(); break;
-        case 16: _t->on_browse1_clicked(); break;
+        case 15: _t->setovpnFile(); break;
+        case 16: _t->setlogsFile(); break;
         case 17: { QMap<QString,QString> _r = _t->readKeyValuePairsFromFile((*reinterpret_cast< const QString(*)>(_a[1])));
             if (_a[0]) *reinterpret_cast< QMap<QString,QString>*>(_a[0]) = std::move(_r); }  break;
         case 18: _t->value_read(); break;
@@ -204,6 +207,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 24: _t->setConfigurationPage(); break;
         case 25: _t->setUsersPage(); break;
         case 26: _t->details_box_update(); break;
+        case 27: _t->configSettings(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -263,13 +267,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 27)
+        if (_id < 28)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 27;
+        _id -= 28;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 27)
+        if (_id < 28)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 27;
+        _id -= 28;
     }
     return _id;
 }

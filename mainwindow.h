@@ -68,9 +68,9 @@ private slots:
         }
     }
 
-    void on_browse2_clicked();
+    void setovpnFile();
 
-    void on_browse1_clicked();
+    void setlogsFile();
     QMap<QString, QString> readKeyValuePairsFromFile(const QString &filePath) {
         QMap<QString, QString> keyValuePairs;
         QFile file(filePath);
@@ -104,6 +104,8 @@ private slots:
     void details_box_update();
 
 
+
+    void configSettings();
 
 private:
     Ui::MainWindow *ui;

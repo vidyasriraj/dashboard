@@ -14,6 +14,7 @@
 #include <QtGui/QIcon>
 #include <QtQuickWidgets/QQuickWidget>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QFrame>
@@ -26,6 +27,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QTableWidget>
@@ -143,6 +145,7 @@ public:
     QPushButton *generalButton;
     QPushButton *proxyButton;
     QPushButton *advancedButton;
+    QPushButton *configButtonSettings;
     QSpacerItem *verticalSpacer_6;
     QVBoxLayout *verticalLayout_32;
     QHBoxLayout *settingsTitle;
@@ -214,6 +217,110 @@ public:
     QLineEdit *path_6;
     QPushButton *browse1;
     QSpacerItem *verticalSpacer_13;
+    QWidget *page;
+    QVBoxLayout *verticalLayout_36;
+    QScrollArea *scrollArea_2;
+    QWidget *scrollAreaWidgetContents_2;
+    QVBoxLayout *verticalLayout_40;
+    QFrame *verticalFrame;
+    QVBoxLayout *verticalLayout_34;
+    QHBoxLayout *horizontalLayout_21;
+    QLabel *label;
+    QComboBox *comboBox;
+    QFrame *line_8;
+    QHBoxLayout *horizontalLayout_20;
+    QLabel *label_2;
+    QLineEdit *lineEdit;
+    QFrame *line_9;
+    QHBoxLayout *horizontalLayout_22;
+    QLabel *label_3;
+    QComboBox *comboBox_2;
+    QFrame *line_10;
+    QHBoxLayout *horizontalLayout_23;
+    QLabel *label_4;
+    QHBoxLayout *horizontalLayout_30;
+    QLineEdit *lineEdit_2;
+    QPushButton *pushButton_3;
+    QFrame *line_11;
+    QHBoxLayout *horizontalLayout_25;
+    QLabel *label_5;
+    QHBoxLayout *horizontalLayout_31;
+    QLineEdit *lineEdit_3;
+    QPushButton *pushButton_4;
+    QFrame *line_12;
+    QHBoxLayout *horizontalLayout_26;
+    QLabel *label_6;
+    QHBoxLayout *horizontalLayout_32;
+    QLineEdit *lineEdit_4;
+    QPushButton *pushButton_5;
+    QFrame *line_13;
+    QHBoxLayout *horizontalLayout_27;
+    QLabel *label_7;
+    QHBoxLayout *horizontalLayout_33;
+    QLineEdit *lineEdit_5;
+    QPushButton *pushButton_6;
+    QFrame *line_14;
+    QHBoxLayout *horizontalLayout_29;
+    QLabel *label_8;
+    QHBoxLayout *horizontalLayout_34;
+    QRadioButton *radioButton;
+    QRadioButton *radioButton_2;
+    QFrame *line_15;
+    QHBoxLayout *horizontalLayout_36;
+    QLabel *label_29;
+    QHBoxLayout *horizontalLayout_42;
+    QRadioButton *radioButton_3;
+    QRadioButton *radioButton_4;
+    QFrame *line_16;
+    QHBoxLayout *horizontalLayout_37;
+    QLabel *label_47;
+    QHBoxLayout *horizontalLayout_43;
+    QRadioButton *radioButton_5;
+    QRadioButton *radioButton_6;
+    QFrame *line_17;
+    QHBoxLayout *horizontalLayout_38;
+    QLabel *label_48;
+    QVBoxLayout *verticalLayout_38;
+    QHBoxLayout *horizontalLayout_44;
+    QRadioButton *radioButton_7;
+    QRadioButton *radioButton_8;
+    QHBoxLayout *horizontalLayout_45;
+    QLabel *label_49;
+    QLineEdit *lineEdit_6;
+    QFrame *line_18;
+    QHBoxLayout *horizontalLayout_39;
+    QLabel *label_50;
+    QVBoxLayout *verticalLayout_39;
+    QHBoxLayout *horizontalLayout_46;
+    QLabel *label_51;
+    QLineEdit *lineEdit_7;
+    QHBoxLayout *horizontalLayout_47;
+    QLabel *label_52;
+    QLineEdit *lineEdit_8;
+    QFrame *line_19;
+    QHBoxLayout *horizontalLayout_40;
+    QLabel *label_53;
+    QComboBox *comboBox_3;
+    QFrame *line_20;
+    QHBoxLayout *horizontalLayout_41;
+    QLabel *label_54;
+    QComboBox *comboBox_4;
+    QFrame *line_21;
+    QHBoxLayout *horizontalLayout_35;
+    QLabel *label_55;
+    QComboBox *comboBox_5;
+    QFrame *line_22;
+    QHBoxLayout *horizontalLayout_48;
+    QLabel *label_56;
+    QLineEdit *lineEdit_9;
+    QFrame *line_23;
+    QHBoxLayout *horizontalLayout_49;
+    QLabel *label_57;
+    QSlider *horizontalSlider;
+    QFrame *line_24;
+    QHBoxLayout *horizontalLayout_50;
+    QLabel *label_58;
+    QSlider *horizontalSlider_2;
     QWidget *aboutusPage;
     QVBoxLayout *verticalLayout_27;
     QFrame *headerLabel_3;
@@ -253,13 +360,17 @@ public:
     QLabel *label_41;
     QLabel *label_42;
     QTableWidget *table;
+    QButtonGroup *buttonGroup_3;
+    QButtonGroup *buttonGroup;
+    QButtonGroup *buttonGroup_4;
+    QButtonGroup *buttonGroup_2;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1060, 724);
-        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        MainWindow->resize(980, 646);
+        QSizePolicy sizePolicy(QSizePolicy::Ignored, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
@@ -283,7 +394,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(sidebar->sizePolicy().hasHeightForWidth());
         sidebar->setSizePolicy(sizePolicy1);
-        sidebar->setMinimumSize(QSize(350, 0));
+        sidebar->setMinimumSize(QSize(300, 0));
         sidebar->setMaximumSize(QSize(350, 1677219));
         sidebar->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,30);"));
         verticalLayout_12 = new QVBoxLayout(sidebar);
@@ -322,7 +433,9 @@ public:
         font.setBold(true);
         connectsym->setFont(font);
         connectsym->setFocusPolicy(Qt::NoFocus);
-        connectsym->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        connectsym->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"padding-left: 10px;\n"
+"padding-right:10px;"));
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/logos/red.png"), QSize(), QIcon::Normal, QIcon::Off);
         connectsym->setIcon(icon2);
@@ -521,7 +634,7 @@ public:
         sidebar_2->setObjectName(QString::fromUtf8("sidebar_2"));
         sizePolicy1.setHeightForWidth(sidebar_2->sizePolicy().hasHeightForWidth());
         sidebar_2->setSizePolicy(sizePolicy1);
-        sidebar_2->setMinimumSize(QSize(350, 0));
+        sidebar_2->setMinimumSize(QSize(300, 0));
         sidebar_2->setMaximumSize(QSize(350, 1677219));
         sidebar_2->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,30);"));
         verticalLayout_18 = new QVBoxLayout(sidebar_2);
@@ -752,8 +865,12 @@ public:
 
         mapWidget = new QQuickWidget(dashboardFrame);
         mapWidget->setObjectName(QString::fromUtf8("mapWidget"));
-        sizePolicy.setHeightForWidth(mapWidget->sizePolicy().hasHeightForWidth());
-        mapWidget->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(mapWidget->sizePolicy().hasHeightForWidth());
+        mapWidget->setSizePolicy(sizePolicy4);
+        mapWidget->setMouseTracking(false);
         mapWidget->setResizeMode(QQuickWidget::SizeRootObjectToView);
 
         mainDashboard->addWidget(mapWidget);
@@ -778,11 +895,11 @@ public:
         uploadLayout->setObjectName(QString::fromUtf8("uploadLayout"));
         label_9 = new QLabel(box1);
         label_9->setObjectName(QString::fromUtf8("label_9"));
-        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Preferred);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(label_9->sizePolicy().hasHeightForWidth());
-        label_9->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy5(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(label_9->sizePolicy().hasHeightForWidth());
+        label_9->setSizePolicy(sizePolicy5);
         label_9->setPixmap(QPixmap(QString::fromUtf8(":/logos/upload.png")));
 
         uploadLayout->addWidget(label_9);
@@ -791,12 +908,20 @@ public:
         verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
         label_10 = new QLabel(box1);
         label_10->setObjectName(QString::fromUtf8("label_10"));
+        QFont font5;
+        font5.setPointSize(18);
+        font5.setBold(true);
+        label_10->setFont(font5);
         label_10->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_7->addWidget(label_10);
 
         label_11 = new QLabel(box1);
         label_11->setObjectName(QString::fromUtf8("label_11"));
+        QFont font6;
+        font6.setPointSize(16);
+        font6.setBold(true);
+        label_11->setFont(font6);
         label_11->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_7->addWidget(label_11);
@@ -811,8 +936,8 @@ public:
         downloadLayout->setObjectName(QString::fromUtf8("downloadLayout"));
         label_12 = new QLabel(box1);
         label_12->setObjectName(QString::fromUtf8("label_12"));
-        sizePolicy4.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
-        label_12->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
+        label_12->setSizePolicy(sizePolicy5);
         label_12->setPixmap(QPixmap(QString::fromUtf8(":/logos/Download.png")));
 
         downloadLayout->addWidget(label_12);
@@ -821,12 +946,14 @@ public:
         verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
         label_13 = new QLabel(box1);
         label_13->setObjectName(QString::fromUtf8("label_13"));
+        label_13->setFont(font5);
         label_13->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_8->addWidget(label_13);
 
         label_14 = new QLabel(box1);
         label_14->setObjectName(QString::fromUtf8("label_14"));
+        label_14->setFont(font6);
         label_14->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_8->addWidget(label_14);
@@ -862,12 +989,14 @@ public:
         verticalLayout_14->setObjectName(QString::fromUtf8("verticalLayout_14"));
         label_24 = new QLabel(box2);
         label_24->setObjectName(QString::fromUtf8("label_24"));
+        label_24->setFont(font5);
         label_24->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_14->addWidget(label_24);
 
         label_25 = new QLabel(box2);
         label_25->setObjectName(QString::fromUtf8("label_25"));
+        label_25->setFont(font6);
         label_25->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_14->addWidget(label_25);
@@ -877,8 +1006,8 @@ public:
 
         label_23 = new QLabel(box2);
         label_23->setObjectName(QString::fromUtf8("label_23"));
-        sizePolicy4.setHeightForWidth(label_23->sizePolicy().hasHeightForWidth());
-        label_23->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(label_23->sizePolicy().hasHeightForWidth());
+        label_23->setSizePolicy(sizePolicy5);
         label_23->setPixmap(QPixmap(QString::fromUtf8(":/logos/Time Machine.png")));
 
         sessionTimeLayout->addWidget(label_23);
@@ -892,12 +1021,14 @@ public:
         verticalLayout_15->setObjectName(QString::fromUtf8("verticalLayout_15"));
         label_27 = new QLabel(box2);
         label_27->setObjectName(QString::fromUtf8("label_27"));
+        label_27->setFont(font5);
         label_27->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_15->addWidget(label_27);
 
         label_28 = new QLabel(box2);
         label_28->setObjectName(QString::fromUtf8("label_28"));
+        label_28->setFont(font6);
         label_28->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         verticalLayout_15->addWidget(label_28);
@@ -907,8 +1038,8 @@ public:
 
         label_26 = new QLabel(box2);
         label_26->setObjectName(QString::fromUtf8("label_26"));
-        sizePolicy4.setHeightForWidth(label_26->sizePolicy().hasHeightForWidth());
-        label_26->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(label_26->sizePolicy().hasHeightForWidth());
+        label_26->setSizePolicy(sizePolicy5);
         label_26->setPixmap(QPixmap(QString::fromUtf8(":/logos/Web Address.png")));
 
         ipAddressLayout->addWidget(label_26);
@@ -948,10 +1079,10 @@ public:
         label_15 = new QLabel(logFrame);
         label_15->setObjectName(QString::fromUtf8("label_15"));
         label_15->setMinimumSize(QSize(0, 0));
-        QFont font5;
-        font5.setPointSize(20);
-        font5.setBold(true);
-        label_15->setFont(font5);
+        QFont font7;
+        font7.setPointSize(20);
+        font7.setBold(true);
+        label_15->setFont(font7);
         label_15->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0,0);\n"
 "color: rgb(255, 255, 255);\n"
 "border:  none;\n"
@@ -1047,7 +1178,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 302, 621));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 128, 128));
         scrollAreaWidgetContents->setStyleSheet(QString::fromUtf8(""));
         verticalLayout_19 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_19->setObjectName(QString::fromUtf8("verticalLayout_19"));
@@ -1139,6 +1270,19 @@ public:
 
         optionsSettings->addWidget(advancedButton);
 
+        configButtonSettings = new QPushButton(sidebarSettings);
+        configButtonSettings->setObjectName(QString::fromUtf8("configButtonSettings"));
+        configButtonSettings->setMinimumSize(QSize(0, 40));
+        configButtonSettings->setFont(font2);
+        configButtonSettings->setStyleSheet(QString::fromUtf8("padding:10px;background-color: rgba(0, 0, 0,0);\n"
+"color: rgb(255, 255, 255);\n"
+"border:  none;\n"
+"text-align:left;\n"
+"border-radius:8px;\n"
+""));
+
+        optionsSettings->addWidget(configButtonSettings);
+
 
         verticalLayout_22->addLayout(optionsSettings);
 
@@ -1156,7 +1300,7 @@ public:
         settingsTitle->setContentsMargins(29, -1, -1, -1);
         label_20 = new QLabel(settingsPage);
         label_20->setObjectName(QString::fromUtf8("label_20"));
-        label_20->setFont(font5);
+        label_20->setFont(font7);
         label_20->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0,0);\n"
 "color: rgb(255, 255, 255);\n"
 "border:  none;\n"
@@ -1217,9 +1361,9 @@ public:
         gridLayout_6->setContentsMargins(25, 20, -1, 20);
         line_5 = new QFrame(frame_3);
         line_5->setObjectName(QString::fromUtf8("line_5"));
-        QFont font6;
-        font6.setStyleStrategy(QFont::PreferDefault);
-        line_5->setFont(font6);
+        QFont font8;
+        font8.setStyleStrategy(QFont::PreferDefault);
+        line_5->setFont(font8);
         line_5->setAutoFillBackground(false);
         line_5->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
 "\n"
@@ -1232,11 +1376,11 @@ public:
         userInterfaceTitle_2 = new QLabel(frame_3);
         userInterfaceTitle_2->setObjectName(QString::fromUtf8("userInterfaceTitle_2"));
         userInterfaceTitle_2->setMinimumSize(QSize(0, 40));
-        QFont font7;
-        font7.setFamily(QString::fromUtf8("Sans Serif"));
-        font7.setPointSize(16);
-        font7.setBold(true);
-        userInterfaceTitle_2->setFont(font7);
+        QFont font9;
+        font9.setFamily(QString::fromUtf8("Sans Serif"));
+        font9.setPointSize(16);
+        font9.setBold(true);
+        userInterfaceTitle_2->setFont(font9);
         userInterfaceTitle_2->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: rgb(255, 255, 255);\n"
 "margin-top: \"10px\";"));
@@ -1316,9 +1460,9 @@ public:
 
         languageLabel = new QLabel(frame_3);
         languageLabel->setObjectName(QString::fromUtf8("languageLabel"));
-        QFont font8;
-        font8.setFamily(QString::fromUtf8("Sans Serif"));
-        languageLabel->setFont(font8);
+        QFont font10;
+        font10.setFamily(QString::fromUtf8("Sans Serif"));
+        languageLabel->setFont(font10);
         languageLabel->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: rgb(255, 255, 255);\n"
 "margin-left: \"40px\";"));
@@ -1335,7 +1479,7 @@ public:
 
         userInterfaceTitle_3 = new QLabel(frame_3);
         userInterfaceTitle_3->setObjectName(QString::fromUtf8("userInterfaceTitle_3"));
-        userInterfaceTitle_3->setFont(font7);
+        userInterfaceTitle_3->setFont(font9);
         userInterfaceTitle_3->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: rgb(255, 255, 255);\n"
 "margin-bottom: \"10px\";"));
@@ -1349,14 +1493,14 @@ public:
         selectLanguageInput->addItem(QString());
         selectLanguageInput->addItem(QString());
         selectLanguageInput->setObjectName(QString::fromUtf8("selectLanguageInput"));
-        QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(selectLanguageInput->sizePolicy().hasHeightForWidth());
-        selectLanguageInput->setSizePolicy(sizePolicy5);
+        QSizePolicy sizePolicy6(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(selectLanguageInput->sizePolicy().hasHeightForWidth());
+        selectLanguageInput->setSizePolicy(sizePolicy6);
         selectLanguageInput->setMinimumSize(QSize(131, 0));
         selectLanguageInput->setMaximumSize(QSize(16777215, 30));
-        selectLanguageInput->setFont(font8);
+        selectLanguageInput->setFont(font10);
         selectLanguageInput->setContextMenuPolicy(Qt::NoContextMenu);
         selectLanguageInput->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    border: 1px solid gray;\n"
@@ -1427,7 +1571,7 @@ public:
 
         userInterfaceTitle = new QLabel(frame_3);
         userInterfaceTitle->setObjectName(QString::fromUtf8("userInterfaceTitle"));
-        userInterfaceTitle->setFont(font7);
+        userInterfaceTitle->setFont(font9);
         userInterfaceTitle->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "color: rgb(255, 255, 255);"));
 
@@ -1461,10 +1605,10 @@ public:
         verticalLayout_23->setObjectName(QString::fromUtf8("verticalLayout_23"));
         option1 = new QRadioButton(verticalFrame_2);
         option1->setObjectName(QString::fromUtf8("option1"));
-        QFont font9;
-        font9.setPointSize(12);
-        font9.setBold(false);
-        option1->setFont(font9);
+        QFont font11;
+        font11.setPointSize(12);
+        font11.setBold(false);
+        option1->setFont(font11);
         option1->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
 "    background-color: transparent;\n"
 "    color: #ffffff;\n"
@@ -1489,9 +1633,9 @@ public:
 
         option2 = new QRadioButton(verticalFrame_2);
         option2->setObjectName(QString::fromUtf8("option2"));
-        QFont font10;
-        font10.setPointSize(12);
-        option2->setFont(font10);
+        QFont font12;
+        font12.setPointSize(12);
+        option2->setFont(font12);
         option2->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
 "    background-color: transparent;\n"
 "    color: #ffffff;\n"
@@ -1515,7 +1659,7 @@ public:
 
         man = new QRadioButton(verticalFrame_2);
         man->setObjectName(QString::fromUtf8("man"));
-        man->setFont(font10);
+        man->setFont(font12);
         man->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
 "    background-color: transparent;\n"
 "    color: #ffffff;\n"
@@ -1556,7 +1700,7 @@ public:
         add = new QLabel(frame_4);
         add->setObjectName(QString::fromUtf8("add"));
         add->setEnabled(true);
-        add->setFont(font10);
+        add->setFont(font12);
         add->setStyleSheet(QString::fromUtf8("color:rgb(255, 255, 255);\n"
 "background-color: rgba(0, 0, 0,0);\n"
 "border:none;"));
@@ -1566,7 +1710,7 @@ public:
         op1 = new QRadioButton(frame_4);
         op1->setObjectName(QString::fromUtf8("op1"));
         op1->setEnabled(true);
-        op1->setFont(font10);
+        op1->setFont(font12);
         op1->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
 "    background-color: transparent;\n"
 "    color: #ffffff;\n"
@@ -1591,7 +1735,7 @@ public:
         op2 = new QRadioButton(frame_4);
         op2->setObjectName(QString::fromUtf8("op2"));
         op2->setEnabled(true);
-        op2->setFont(font10);
+        op2->setFont(font12);
         op2->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
 "    background-color: transparent;\n"
 "    color: #ffffff;\n"
@@ -1616,7 +1760,7 @@ public:
         port = new QLabel(frame_4);
         port->setObjectName(QString::fromUtf8("port"));
         port->setEnabled(true);
-        port->setFont(font10);
+        port->setFont(font12);
         port->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0,0);\n"
 "color: rgb(255, 255, 255);\n"
 "border:none;"));
@@ -1686,10 +1830,7 @@ public:
         label_34->setObjectName(QString::fromUtf8("label_34"));
         label_34->setMinimumSize(QSize(0, 50));
         label_34->setMaximumSize(QSize(16777215, 50));
-        QFont font11;
-        font11.setPointSize(16);
-        font11.setBold(true);
-        label_34->setFont(font11);
+        label_34->setFont(font6);
         label_34->setStyleSheet(QString::fromUtf8("background: transparent;\n"
 "color: rgb(255, 255, 255);"));
 
@@ -1726,7 +1867,7 @@ public:
 
         line_7 = new QFrame(frame_5);
         line_7->setObjectName(QString::fromUtf8("line_7"));
-        line_7->setFont(font6);
+        line_7->setFont(font8);
         line_7->setAutoFillBackground(false);
         line_7->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
 "\n"
@@ -1740,7 +1881,7 @@ public:
         label_39->setObjectName(QString::fromUtf8("label_39"));
         label_39->setMinimumSize(QSize(0, 50));
         label_39->setMaximumSize(QSize(16777215, 50));
-        label_39->setFont(font11);
+        label_39->setFont(font6);
         label_39->setStyleSheet(QString::fromUtf8("background: transparent;\n"
 "color: rgb(255, 255, 255);"));
 
@@ -1771,7 +1912,7 @@ public:
 
         line_6 = new QFrame(frame_5);
         line_6->setObjectName(QString::fromUtf8("line_6"));
-        line_6->setFont(font6);
+        line_6->setFont(font8);
         line_6->setAutoFillBackground(false);
         line_6->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
 "\n"
@@ -1785,7 +1926,7 @@ public:
         label_36->setObjectName(QString::fromUtf8("label_36"));
         label_36->setMinimumSize(QSize(0, 50));
         label_36->setMaximumSize(QSize(16777215, 50));
-        label_36->setFont(font11);
+        label_36->setFont(font6);
         label_36->setStyleSheet(QString::fromUtf8("background: transparent;\n"
 "color: rgb(255, 255, 255);\n"
 ""));
@@ -1848,6 +1989,1008 @@ public:
         verticalLayout_25->addItem(verticalSpacer_13);
 
         stackedWidget_2->addWidget(advancedSettingsPage);
+        page = new QWidget();
+        page->setObjectName(QString::fromUtf8("page"));
+        verticalLayout_36 = new QVBoxLayout(page);
+        verticalLayout_36->setObjectName(QString::fromUtf8("verticalLayout_36"));
+        scrollArea_2 = new QScrollArea(page);
+        scrollArea_2->setObjectName(QString::fromUtf8("scrollArea_2"));
+        sizePolicy.setHeightForWidth(scrollArea_2->sizePolicy().hasHeightForWidth());
+        scrollArea_2->setSizePolicy(sizePolicy);
+        scrollArea_2->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0,0);"));
+        scrollArea_2->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        scrollArea_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        scrollArea_2->setWidgetResizable(true);
+        scrollAreaWidgetContents_2 = new QWidget();
+        scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 552, 1011));
+        verticalLayout_40 = new QVBoxLayout(scrollAreaWidgetContents_2);
+        verticalLayout_40->setObjectName(QString::fromUtf8("verticalLayout_40"));
+        verticalFrame = new QFrame(scrollAreaWidgetContents_2);
+        verticalFrame->setObjectName(QString::fromUtf8("verticalFrame"));
+        verticalFrame->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0,0);\n"
+"color: rgb(255, 255, 255);\n"
+"QLine {\n"
+"    background-color: #474748;\n"
+"}"));
+        verticalLayout_34 = new QVBoxLayout(verticalFrame);
+        verticalLayout_34->setSpacing(10);
+        verticalLayout_34->setObjectName(QString::fromUtf8("verticalLayout_34"));
+        verticalLayout_34->setContentsMargins(0, 10, 0, 10);
+        horizontalLayout_21 = new QHBoxLayout();
+        horizontalLayout_21->setSpacing(40);
+        horizontalLayout_21->setObjectName(QString::fromUtf8("horizontalLayout_21"));
+        label = new QLabel(verticalFrame);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setMaximumSize(QSize(200, 16777215));
+        label->setFont(font2);
+
+        horizontalLayout_21->addWidget(label);
+
+        comboBox = new QComboBox(verticalFrame);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 6em;\n"
+"    background-color: rgba(180,180,180,200); \n"
+"    color: white; /* Text color */\n"
+"    \n"
+"	selection-background-color: rgba(79, 158, 164,100);\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 20px;\n"
+"    border-left: none; /* No left border for the drop-down arrow */\n"
+"   background-color: rgba(180,180,180,200); \n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    border: 1px solid gray;\n"
+"    background-color: rgba(180,180,180,200); \n"
+"    color: white; /* Text color */\n"
+"    selection-background-color: rgba(79, 158, 164,100);\n"
+"}\n"
+""));
+
+        horizontalLayout_21->addWidget(comboBox);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_21);
+
+        line_8 = new QFrame(verticalFrame);
+        line_8->setObjectName(QString::fromUtf8("line_8"));
+        line_8->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_8->setFrameShape(QFrame::HLine);
+        line_8->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_8);
+
+        horizontalLayout_20 = new QHBoxLayout();
+        horizontalLayout_20->setSpacing(40);
+        horizontalLayout_20->setObjectName(QString::fromUtf8("horizontalLayout_20"));
+        label_2 = new QLabel(verticalFrame);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setMinimumSize(QSize(200, 0));
+        label_2->setMaximumSize(QSize(200, 16777215));
+        label_2->setFont(font2);
+
+        horizontalLayout_20->addWidget(label_2);
+
+        lineEdit = new QLineEdit(verticalFrame);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,50);\n"
+"color: rgb(255, 255, 255);"));
+
+        horizontalLayout_20->addWidget(lineEdit);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_20);
+
+        line_9 = new QFrame(verticalFrame);
+        line_9->setObjectName(QString::fromUtf8("line_9"));
+        line_9->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_9->setFrameShape(QFrame::HLine);
+        line_9->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_9);
+
+        horizontalLayout_22 = new QHBoxLayout();
+        horizontalLayout_22->setSpacing(40);
+        horizontalLayout_22->setObjectName(QString::fromUtf8("horizontalLayout_22"));
+        label_3 = new QLabel(verticalFrame);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setMinimumSize(QSize(200, 0));
+        label_3->setMaximumSize(QSize(150, 16777215));
+        label_3->setFont(font2);
+
+        horizontalLayout_22->addWidget(label_3);
+
+        comboBox_2 = new QComboBox(verticalFrame);
+        comboBox_2->addItem(QString());
+        comboBox_2->addItem(QString());
+        comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
+        comboBox_2->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 6em;\n"
+"    background-color: rgba(180,180,180,200); \n"
+"    color: white; /* Text color */\n"
+"    \n"
+"	selection-background-color: rgba(79, 158, 164,100);\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 20px;\n"
+"    border-left: none; /* No left border for the drop-down arrow */\n"
+"   background-color: rgba(180,180,180,200); \n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    border: 1px solid gray;\n"
+"    background-color: rgba(180,180,180,200); \n"
+"    color: white; /* Text color */\n"
+"    selection-background-color: rgba(79, 158, 164,100);\n"
+"}\n"
+""));
+
+        horizontalLayout_22->addWidget(comboBox_2);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_22);
+
+        line_10 = new QFrame(verticalFrame);
+        line_10->setObjectName(QString::fromUtf8("line_10"));
+        line_10->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_10->setFrameShape(QFrame::HLine);
+        line_10->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_10);
+
+        horizontalLayout_23 = new QHBoxLayout();
+        horizontalLayout_23->setSpacing(40);
+        horizontalLayout_23->setObjectName(QString::fromUtf8("horizontalLayout_23"));
+        label_4 = new QLabel(verticalFrame);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setMinimumSize(QSize(200, 0));
+        label_4->setMaximumSize(QSize(200, 16777215));
+        label_4->setFont(font2);
+
+        horizontalLayout_23->addWidget(label_4);
+
+        horizontalLayout_30 = new QHBoxLayout();
+        horizontalLayout_30->setSpacing(11);
+        horizontalLayout_30->setObjectName(QString::fromUtf8("horizontalLayout_30"));
+        lineEdit_2 = new QLineEdit(verticalFrame);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,50);\n"
+"color: rgb(255, 255, 255);"));
+
+        horizontalLayout_30->addWidget(lineEdit_2);
+
+        pushButton_3 = new QPushButton(verticalFrame);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        horizontalLayout_30->addWidget(pushButton_3);
+
+
+        horizontalLayout_23->addLayout(horizontalLayout_30);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_23);
+
+        line_11 = new QFrame(verticalFrame);
+        line_11->setObjectName(QString::fromUtf8("line_11"));
+        line_11->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_11->setFrameShape(QFrame::HLine);
+        line_11->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_11);
+
+        horizontalLayout_25 = new QHBoxLayout();
+        horizontalLayout_25->setSpacing(40);
+        horizontalLayout_25->setObjectName(QString::fromUtf8("horizontalLayout_25"));
+        label_5 = new QLabel(verticalFrame);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setMinimumSize(QSize(200, 0));
+        label_5->setMaximumSize(QSize(200, 16777215));
+        label_5->setFont(font2);
+
+        horizontalLayout_25->addWidget(label_5);
+
+        horizontalLayout_31 = new QHBoxLayout();
+        horizontalLayout_31->setSpacing(11);
+        horizontalLayout_31->setObjectName(QString::fromUtf8("horizontalLayout_31"));
+        lineEdit_3 = new QLineEdit(verticalFrame);
+        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,50);\n"
+"color: rgb(255, 255, 255);"));
+
+        horizontalLayout_31->addWidget(lineEdit_3);
+
+        pushButton_4 = new QPushButton(verticalFrame);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+
+        horizontalLayout_31->addWidget(pushButton_4);
+
+
+        horizontalLayout_25->addLayout(horizontalLayout_31);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_25);
+
+        line_12 = new QFrame(verticalFrame);
+        line_12->setObjectName(QString::fromUtf8("line_12"));
+        line_12->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_12->setFrameShape(QFrame::HLine);
+        line_12->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_12);
+
+        horizontalLayout_26 = new QHBoxLayout();
+        horizontalLayout_26->setSpacing(40);
+        horizontalLayout_26->setObjectName(QString::fromUtf8("horizontalLayout_26"));
+        label_6 = new QLabel(verticalFrame);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setMinimumSize(QSize(200, 0));
+        label_6->setMaximumSize(QSize(200, 16777215));
+        label_6->setFont(font2);
+
+        horizontalLayout_26->addWidget(label_6);
+
+        horizontalLayout_32 = new QHBoxLayout();
+        horizontalLayout_32->setSpacing(11);
+        horizontalLayout_32->setObjectName(QString::fromUtf8("horizontalLayout_32"));
+        lineEdit_4 = new QLineEdit(verticalFrame);
+        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        lineEdit_4->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,50);\n"
+"color: rgb(255, 255, 255);"));
+
+        horizontalLayout_32->addWidget(lineEdit_4);
+
+        pushButton_5 = new QPushButton(verticalFrame);
+        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+
+        horizontalLayout_32->addWidget(pushButton_5);
+
+
+        horizontalLayout_26->addLayout(horizontalLayout_32);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_26);
+
+        line_13 = new QFrame(verticalFrame);
+        line_13->setObjectName(QString::fromUtf8("line_13"));
+        line_13->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_13->setFrameShape(QFrame::HLine);
+        line_13->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_13);
+
+        horizontalLayout_27 = new QHBoxLayout();
+        horizontalLayout_27->setSpacing(40);
+        horizontalLayout_27->setObjectName(QString::fromUtf8("horizontalLayout_27"));
+        label_7 = new QLabel(verticalFrame);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setMinimumSize(QSize(200, 0));
+        label_7->setMaximumSize(QSize(200, 16777215));
+        label_7->setFont(font2);
+
+        horizontalLayout_27->addWidget(label_7);
+
+        horizontalLayout_33 = new QHBoxLayout();
+        horizontalLayout_33->setSpacing(11);
+        horizontalLayout_33->setObjectName(QString::fromUtf8("horizontalLayout_33"));
+        lineEdit_5 = new QLineEdit(verticalFrame);
+        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
+        lineEdit_5->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,50);\n"
+"color: rgb(255, 255, 255);"));
+
+        horizontalLayout_33->addWidget(lineEdit_5);
+
+        pushButton_6 = new QPushButton(verticalFrame);
+        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+
+        horizontalLayout_33->addWidget(pushButton_6);
+
+
+        horizontalLayout_27->addLayout(horizontalLayout_33);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_27);
+
+        line_14 = new QFrame(verticalFrame);
+        line_14->setObjectName(QString::fromUtf8("line_14"));
+        line_14->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_14->setFrameShape(QFrame::HLine);
+        line_14->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_14);
+
+        horizontalLayout_29 = new QHBoxLayout();
+        horizontalLayout_29->setSpacing(40);
+        horizontalLayout_29->setObjectName(QString::fromUtf8("horizontalLayout_29"));
+        label_8 = new QLabel(verticalFrame);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setMinimumSize(QSize(200, 0));
+        label_8->setMaximumSize(QSize(200, 16777215));
+        label_8->setFont(font2);
+
+        horizontalLayout_29->addWidget(label_8);
+
+        horizontalLayout_34 = new QHBoxLayout();
+        horizontalLayout_34->setSpacing(20);
+        horizontalLayout_34->setObjectName(QString::fromUtf8("horizontalLayout_34"));
+        radioButton = new QRadioButton(verticalFrame);
+        buttonGroup = new QButtonGroup(MainWindow);
+        buttonGroup->setObjectName(QString::fromUtf8("buttonGroup"));
+        buttonGroup->addButton(radioButton);
+        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        radioButton->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    background-color: transparent;\n"
+"    color: #ffffff;\n"
+"    padding: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 8px;\n"
+"    height: 8px;\n"
+"    border-radius: 8px;\n"
+"    border: 2px solid #ffffff;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    background-color: #ffffff;\n"
+"}\n"
+""));
+        radioButton->setChecked(true);
+
+        horizontalLayout_34->addWidget(radioButton);
+
+        radioButton_2 = new QRadioButton(verticalFrame);
+        buttonGroup->addButton(radioButton_2);
+        radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
+        radioButton_2->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    background-color: transparent;\n"
+"    color: #ffffff;\n"
+"    padding: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 8px;\n"
+"    height: 8px;\n"
+"    border-radius: 8px;\n"
+"    border: 2px solid #ffffff;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    background-color: #ffffff;\n"
+"}\n"
+""));
+
+        horizontalLayout_34->addWidget(radioButton_2);
+
+
+        horizontalLayout_29->addLayout(horizontalLayout_34);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_29);
+
+        line_15 = new QFrame(verticalFrame);
+        line_15->setObjectName(QString::fromUtf8("line_15"));
+        line_15->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_15->setFrameShape(QFrame::HLine);
+        line_15->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_15);
+
+        horizontalLayout_36 = new QHBoxLayout();
+        horizontalLayout_36->setSpacing(40);
+        horizontalLayout_36->setObjectName(QString::fromUtf8("horizontalLayout_36"));
+        label_29 = new QLabel(verticalFrame);
+        label_29->setObjectName(QString::fromUtf8("label_29"));
+        label_29->setMinimumSize(QSize(200, 0));
+        label_29->setMaximumSize(QSize(200, 16777215));
+        label_29->setFont(font2);
+
+        horizontalLayout_36->addWidget(label_29);
+
+        horizontalLayout_42 = new QHBoxLayout();
+        horizontalLayout_42->setSpacing(20);
+        horizontalLayout_42->setObjectName(QString::fromUtf8("horizontalLayout_42"));
+        radioButton_3 = new QRadioButton(verticalFrame);
+        buttonGroup_2 = new QButtonGroup(MainWindow);
+        buttonGroup_2->setObjectName(QString::fromUtf8("buttonGroup_2"));
+        buttonGroup_2->addButton(radioButton_3);
+        radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
+        radioButton_3->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    background-color: transparent;\n"
+"    color: #ffffff;\n"
+"    padding: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 8px;\n"
+"    height: 8px;\n"
+"    border-radius: 8px;\n"
+"    border: 2px solid #ffffff;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    background-color: #ffffff;\n"
+"}\n"
+""));
+
+        horizontalLayout_42->addWidget(radioButton_3);
+
+        radioButton_4 = new QRadioButton(verticalFrame);
+        buttonGroup_2->addButton(radioButton_4);
+        radioButton_4->setObjectName(QString::fromUtf8("radioButton_4"));
+        radioButton_4->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    background-color: transparent;\n"
+"    color: #ffffff;\n"
+"    padding: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 8px;\n"
+"    height: 8px;\n"
+"    border-radius: 8px;\n"
+"    border: 2px solid #ffffff;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    background-color: #ffffff;\n"
+"}\n"
+""));
+        radioButton_4->setChecked(true);
+
+        horizontalLayout_42->addWidget(radioButton_4);
+
+
+        horizontalLayout_36->addLayout(horizontalLayout_42);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_36);
+
+        line_16 = new QFrame(verticalFrame);
+        line_16->setObjectName(QString::fromUtf8("line_16"));
+        line_16->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_16->setFrameShape(QFrame::HLine);
+        line_16->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_16);
+
+        horizontalLayout_37 = new QHBoxLayout();
+        horizontalLayout_37->setSpacing(40);
+        horizontalLayout_37->setObjectName(QString::fromUtf8("horizontalLayout_37"));
+        label_47 = new QLabel(verticalFrame);
+        label_47->setObjectName(QString::fromUtf8("label_47"));
+        label_47->setMinimumSize(QSize(200, 0));
+        label_47->setMaximumSize(QSize(200, 16777215));
+        label_47->setFont(font2);
+
+        horizontalLayout_37->addWidget(label_47);
+
+        horizontalLayout_43 = new QHBoxLayout();
+        horizontalLayout_43->setSpacing(20);
+        horizontalLayout_43->setObjectName(QString::fromUtf8("horizontalLayout_43"));
+        radioButton_5 = new QRadioButton(verticalFrame);
+        buttonGroup_3 = new QButtonGroup(MainWindow);
+        buttonGroup_3->setObjectName(QString::fromUtf8("buttonGroup_3"));
+        buttonGroup_3->addButton(radioButton_5);
+        radioButton_5->setObjectName(QString::fromUtf8("radioButton_5"));
+        radioButton_5->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    background-color: transparent;\n"
+"    color: #ffffff;\n"
+"    padding: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 8px;\n"
+"    height: 8px;\n"
+"    border-radius: 8px;\n"
+"    border: 2px solid #ffffff;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    background-color: #ffffff;\n"
+"}\n"
+""));
+
+        horizontalLayout_43->addWidget(radioButton_5);
+
+        radioButton_6 = new QRadioButton(verticalFrame);
+        buttonGroup_3->addButton(radioButton_6);
+        radioButton_6->setObjectName(QString::fromUtf8("radioButton_6"));
+        radioButton_6->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    background-color: transparent;\n"
+"    color: #ffffff;\n"
+"    padding: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 8px;\n"
+"    height: 8px;\n"
+"    border-radius: 8px;\n"
+"    border: 2px solid #ffffff;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    background-color: #ffffff;\n"
+"}\n"
+""));
+        radioButton_6->setChecked(true);
+
+        horizontalLayout_43->addWidget(radioButton_6);
+
+
+        horizontalLayout_37->addLayout(horizontalLayout_43);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_37);
+
+        line_17 = new QFrame(verticalFrame);
+        line_17->setObjectName(QString::fromUtf8("line_17"));
+        line_17->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_17->setFrameShape(QFrame::HLine);
+        line_17->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_17);
+
+        horizontalLayout_38 = new QHBoxLayout();
+        horizontalLayout_38->setSpacing(40);
+        horizontalLayout_38->setObjectName(QString::fromUtf8("horizontalLayout_38"));
+        label_48 = new QLabel(verticalFrame);
+        label_48->setObjectName(QString::fromUtf8("label_48"));
+        label_48->setMinimumSize(QSize(200, 0));
+        label_48->setMaximumSize(QSize(200, 16777215));
+        label_48->setFont(font2);
+        label_48->setWordWrap(true);
+
+        horizontalLayout_38->addWidget(label_48);
+
+        verticalLayout_38 = new QVBoxLayout();
+        verticalLayout_38->setSpacing(10);
+        verticalLayout_38->setObjectName(QString::fromUtf8("verticalLayout_38"));
+        horizontalLayout_44 = new QHBoxLayout();
+        horizontalLayout_44->setSpacing(20);
+        horizontalLayout_44->setObjectName(QString::fromUtf8("horizontalLayout_44"));
+        radioButton_7 = new QRadioButton(verticalFrame);
+        buttonGroup_4 = new QButtonGroup(MainWindow);
+        buttonGroup_4->setObjectName(QString::fromUtf8("buttonGroup_4"));
+        buttonGroup_4->addButton(radioButton_7);
+        radioButton_7->setObjectName(QString::fromUtf8("radioButton_7"));
+        radioButton_7->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    background-color: transparent;\n"
+"    color: #ffffff;\n"
+"    padding: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 8px;\n"
+"    height: 8px;\n"
+"    border-radius: 8px;\n"
+"    border: 2px solid #ffffff;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    background-color: #ffffff;\n"
+"}\n"
+""));
+        radioButton_7->setChecked(true);
+
+        horizontalLayout_44->addWidget(radioButton_7);
+
+        radioButton_8 = new QRadioButton(verticalFrame);
+        buttonGroup_4->addButton(radioButton_8);
+        radioButton_8->setObjectName(QString::fromUtf8("radioButton_8"));
+        radioButton_8->setStyleSheet(QString::fromUtf8("QRadioButton {\n"
+"    background-color: transparent;\n"
+"    color: #ffffff;\n"
+"    padding: 5px;\n"
+"    border: none;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator {\n"
+"    width: 8px;\n"
+"    height: 8px;\n"
+"    border-radius: 8px;\n"
+"    border: 2px solid #ffffff;\n"
+"}\n"
+"\n"
+"QRadioButton::indicator:checked {\n"
+"    background-color: #ffffff;\n"
+"}\n"
+""));
+
+        horizontalLayout_44->addWidget(radioButton_8);
+
+
+        verticalLayout_38->addLayout(horizontalLayout_44);
+
+        horizontalLayout_45 = new QHBoxLayout();
+        horizontalLayout_45->setObjectName(QString::fromUtf8("horizontalLayout_45"));
+        label_49 = new QLabel(verticalFrame);
+        label_49->setObjectName(QString::fromUtf8("label_49"));
+        QFont font13;
+        font13.setBold(true);
+        label_49->setFont(font13);
+
+        horizontalLayout_45->addWidget(label_49);
+
+        lineEdit_6 = new QLineEdit(verticalFrame);
+        lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
+        QSizePolicy sizePolicy7(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+        sizePolicy7.setHorizontalStretch(0);
+        sizePolicy7.setVerticalStretch(0);
+        sizePolicy7.setHeightForWidth(lineEdit_6->sizePolicy().hasHeightForWidth());
+        lineEdit_6->setSizePolicy(sizePolicy7);
+        lineEdit_6->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,50);\n"
+"color: rgb(255, 255, 255);"));
+
+        horizontalLayout_45->addWidget(lineEdit_6);
+
+
+        verticalLayout_38->addLayout(horizontalLayout_45);
+
+
+        horizontalLayout_38->addLayout(verticalLayout_38);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_38);
+
+        line_18 = new QFrame(verticalFrame);
+        line_18->setObjectName(QString::fromUtf8("line_18"));
+        line_18->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_18->setFrameShape(QFrame::HLine);
+        line_18->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_18);
+
+        horizontalLayout_39 = new QHBoxLayout();
+        horizontalLayout_39->setSpacing(40);
+        horizontalLayout_39->setObjectName(QString::fromUtf8("horizontalLayout_39"));
+        label_50 = new QLabel(verticalFrame);
+        label_50->setObjectName(QString::fromUtf8("label_50"));
+        label_50->setMinimumSize(QSize(200, 0));
+        label_50->setMaximumSize(QSize(200, 16777215));
+        label_50->setFont(font2);
+
+        horizontalLayout_39->addWidget(label_50);
+
+        verticalLayout_39 = new QVBoxLayout();
+        verticalLayout_39->setSpacing(0);
+        verticalLayout_39->setObjectName(QString::fromUtf8("verticalLayout_39"));
+        horizontalLayout_46 = new QHBoxLayout();
+        horizontalLayout_46->setSpacing(10);
+        horizontalLayout_46->setObjectName(QString::fromUtf8("horizontalLayout_46"));
+        label_51 = new QLabel(verticalFrame);
+        label_51->setObjectName(QString::fromUtf8("label_51"));
+        label_51->setMinimumSize(QSize(120, 0));
+        label_51->setFont(font13);
+
+        horizontalLayout_46->addWidget(label_51);
+
+        lineEdit_7 = new QLineEdit(verticalFrame);
+        lineEdit_7->setObjectName(QString::fromUtf8("lineEdit_7"));
+        lineEdit_7->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,50);\n"
+"color: rgb(255, 255, 255);"));
+
+        horizontalLayout_46->addWidget(lineEdit_7);
+
+
+        verticalLayout_39->addLayout(horizontalLayout_46);
+
+        horizontalLayout_47 = new QHBoxLayout();
+        horizontalLayout_47->setSpacing(10);
+        horizontalLayout_47->setObjectName(QString::fromUtf8("horizontalLayout_47"));
+        label_52 = new QLabel(verticalFrame);
+        label_52->setObjectName(QString::fromUtf8("label_52"));
+        label_52->setMinimumSize(QSize(120, 0));
+        label_52->setFont(font13);
+
+        horizontalLayout_47->addWidget(label_52);
+
+        lineEdit_8 = new QLineEdit(verticalFrame);
+        lineEdit_8->setObjectName(QString::fromUtf8("lineEdit_8"));
+        lineEdit_8->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,50);\n"
+"color: rgb(255, 255, 255);"));
+
+        horizontalLayout_47->addWidget(lineEdit_8);
+
+
+        verticalLayout_39->addLayout(horizontalLayout_47);
+
+
+        horizontalLayout_39->addLayout(verticalLayout_39);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_39);
+
+        line_19 = new QFrame(verticalFrame);
+        line_19->setObjectName(QString::fromUtf8("line_19"));
+        line_19->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_19->setFrameShape(QFrame::HLine);
+        line_19->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_19);
+
+        horizontalLayout_40 = new QHBoxLayout();
+        horizontalLayout_40->setSpacing(40);
+        horizontalLayout_40->setObjectName(QString::fromUtf8("horizontalLayout_40"));
+        label_53 = new QLabel(verticalFrame);
+        label_53->setObjectName(QString::fromUtf8("label_53"));
+        label_53->setMinimumSize(QSize(200, 0));
+        label_53->setMaximumSize(QSize(200, 16777215));
+        label_53->setFont(font2);
+
+        horizontalLayout_40->addWidget(label_53);
+
+        comboBox_3 = new QComboBox(verticalFrame);
+        comboBox_3->addItem(QString());
+        comboBox_3->addItem(QString());
+        comboBox_3->addItem(QString());
+        comboBox_3->addItem(QString());
+        comboBox_3->addItem(QString());
+        comboBox_3->addItem(QString());
+        comboBox_3->setObjectName(QString::fromUtf8("comboBox_3"));
+        comboBox_3->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 6em;\n"
+"    background-color: rgba(180,180,180,200); \n"
+"    color: white; /* Text color */\n"
+"    \n"
+"	selection-background-color: rgba(79, 158, 164,100);\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 20px;\n"
+"    border-left: none; /* No left border for the drop-down arrow */\n"
+"   background-color: rgba(180,180,180,200); \n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    border: 1px solid gray;\n"
+"    background-color: rgba(180,180,180,200); \n"
+"    color: white; /* Text color */\n"
+"    selection-background-color: rgba(79, 158, 164,100);\n"
+"}\n"
+""));
+
+        horizontalLayout_40->addWidget(comboBox_3);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_40);
+
+        line_20 = new QFrame(verticalFrame);
+        line_20->setObjectName(QString::fromUtf8("line_20"));
+        line_20->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_20->setFrameShape(QFrame::HLine);
+        line_20->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_20);
+
+        horizontalLayout_41 = new QHBoxLayout();
+        horizontalLayout_41->setSpacing(40);
+        horizontalLayout_41->setObjectName(QString::fromUtf8("horizontalLayout_41"));
+        label_54 = new QLabel(verticalFrame);
+        label_54->setObjectName(QString::fromUtf8("label_54"));
+        label_54->setMinimumSize(QSize(200, 0));
+        label_54->setMaximumSize(QSize(200, 16777215));
+        label_54->setFont(font2);
+
+        horizontalLayout_41->addWidget(label_54);
+
+        comboBox_4 = new QComboBox(verticalFrame);
+        comboBox_4->addItem(QString());
+        comboBox_4->addItem(QString());
+        comboBox_4->setObjectName(QString::fromUtf8("comboBox_4"));
+        comboBox_4->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 6em;\n"
+"    background-color: rgba(180,180,180,200); \n"
+"    color: white; /* Text color */\n"
+"    \n"
+"	selection-background-color: rgba(79, 158, 164,100);\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 20px;\n"
+"    border-left: none; /* No left border for the drop-down arrow */\n"
+"   background-color: rgba(180,180,180,200); \n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    border: 1px solid gray;\n"
+"    background-color: rgba(180,180,180,200); \n"
+"    color: white; /* Text color */\n"
+"    selection-background-color: rgba(79, 158, 164,100);\n"
+"}\n"
+""));
+
+        horizontalLayout_41->addWidget(comboBox_4);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_41);
+
+        line_21 = new QFrame(verticalFrame);
+        line_21->setObjectName(QString::fromUtf8("line_21"));
+        line_21->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_21->setFrameShape(QFrame::HLine);
+        line_21->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_21);
+
+        horizontalLayout_35 = new QHBoxLayout();
+        horizontalLayout_35->setSpacing(40);
+        horizontalLayout_35->setObjectName(QString::fromUtf8("horizontalLayout_35"));
+        label_55 = new QLabel(verticalFrame);
+        label_55->setObjectName(QString::fromUtf8("label_55"));
+        label_55->setMinimumSize(QSize(200, 0));
+        label_55->setMaximumSize(QSize(200, 16777215));
+        label_55->setFont(font2);
+
+        horizontalLayout_35->addWidget(label_55);
+
+        comboBox_5 = new QComboBox(verticalFrame);
+        comboBox_5->addItem(QString());
+        comboBox_5->addItem(QString());
+        comboBox_5->setObjectName(QString::fromUtf8("comboBox_5"));
+        comboBox_5->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 6em;\n"
+"    background-color: rgba(180,180,180,200); \n"
+"    color: white; /* Text color */\n"
+"    \n"
+"	selection-background-color: rgba(79, 158, 164,100);\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 20px;\n"
+"    border-left: none; /* No left border for the drop-down arrow */\n"
+"   background-color: rgba(180,180,180,200); \n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    border: 1px solid gray;\n"
+"    background-color: rgba(180,180,180,200); \n"
+"    color: white; /* Text color */\n"
+"    selection-background-color: rgba(79, 158, 164,100);\n"
+"}\n"
+""));
+
+        horizontalLayout_35->addWidget(comboBox_5);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_35);
+
+        line_22 = new QFrame(verticalFrame);
+        line_22->setObjectName(QString::fromUtf8("line_22"));
+        line_22->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_22->setFrameShape(QFrame::HLine);
+        line_22->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_22);
+
+        horizontalLayout_48 = new QHBoxLayout();
+        horizontalLayout_48->setSpacing(40);
+        horizontalLayout_48->setObjectName(QString::fromUtf8("horizontalLayout_48"));
+        label_56 = new QLabel(verticalFrame);
+        label_56->setObjectName(QString::fromUtf8("label_56"));
+        label_56->setMinimumSize(QSize(200, 0));
+        label_56->setMaximumSize(QSize(200, 16777215));
+        label_56->setFont(font2);
+
+        horizontalLayout_48->addWidget(label_56);
+
+        lineEdit_9 = new QLineEdit(verticalFrame);
+        lineEdit_9->setObjectName(QString::fromUtf8("lineEdit_9"));
+        lineEdit_9->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255,50);\n"
+"color: rgb(255, 255, 255);"));
+
+        horizontalLayout_48->addWidget(lineEdit_9);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_48);
+
+        line_23 = new QFrame(verticalFrame);
+        line_23->setObjectName(QString::fromUtf8("line_23"));
+        line_23->setStyleSheet(QString::fromUtf8("background-color: #474748;"));
+        line_23->setFrameShape(QFrame::HLine);
+        line_23->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_23);
+
+        horizontalLayout_49 = new QHBoxLayout();
+        horizontalLayout_49->setSpacing(40);
+        horizontalLayout_49->setObjectName(QString::fromUtf8("horizontalLayout_49"));
+        label_57 = new QLabel(verticalFrame);
+        label_57->setObjectName(QString::fromUtf8("label_57"));
+        label_57->setMinimumSize(QSize(200, 0));
+        label_57->setMaximumSize(QSize(200, 16777215));
+        label_57->setFont(font2);
+
+        horizontalLayout_49->addWidget(label_57);
+
+        horizontalSlider = new QSlider(verticalFrame);
+        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
+        horizontalSlider->setMaximum(9);
+        horizontalSlider->setSliderPosition(6);
+        horizontalSlider->setOrientation(Qt::Horizontal);
+
+        horizontalLayout_49->addWidget(horizontalSlider);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_49);
+
+        line_24 = new QFrame(verticalFrame);
+        line_24->setObjectName(QString::fromUtf8("line_24"));
+        line_24->setStyleSheet(QString::fromUtf8("\n"
+"    background-color: #474748;\n"
+""));
+        line_24->setFrameShape(QFrame::HLine);
+        line_24->setFrameShadow(QFrame::Sunken);
+
+        verticalLayout_34->addWidget(line_24);
+
+        horizontalLayout_50 = new QHBoxLayout();
+        horizontalLayout_50->setSpacing(40);
+        horizontalLayout_50->setObjectName(QString::fromUtf8("horizontalLayout_50"));
+        label_58 = new QLabel(verticalFrame);
+        label_58->setObjectName(QString::fromUtf8("label_58"));
+        label_58->setMinimumSize(QSize(200, 0));
+        label_58->setMaximumSize(QSize(200, 16777215));
+        label_58->setFont(font2);
+
+        horizontalLayout_50->addWidget(label_58);
+
+        horizontalSlider_2 = new QSlider(verticalFrame);
+        horizontalSlider_2->setObjectName(QString::fromUtf8("horizontalSlider_2"));
+        horizontalSlider_2->setMaximum(6);
+        horizontalSlider_2->setSliderPosition(2);
+        horizontalSlider_2->setOrientation(Qt::Horizontal);
+
+        horizontalLayout_50->addWidget(horizontalSlider_2);
+
+
+        verticalLayout_34->addLayout(horizontalLayout_50);
+
+
+        verticalLayout_40->addWidget(verticalFrame);
+
+        scrollArea_2->setWidget(scrollAreaWidgetContents_2);
+
+        verticalLayout_36->addWidget(scrollArea_2);
+
+        stackedWidget_2->addWidget(page);
 
         verticalLayout_32->addWidget(stackedWidget_2);
 
@@ -1874,17 +3017,17 @@ public:
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         label_18 = new QLabel(headerLabel_3);
         label_18->setObjectName(QString::fromUtf8("label_18"));
-        label_18->setFont(font5);
+        label_18->setFont(font7);
         label_18->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
 
         horizontalLayout_4->addWidget(label_18);
 
         serverHeading_2 = new QLabel(headerLabel_3);
         serverHeading_2->setObjectName(QString::fromUtf8("serverHeading_2"));
-        QFont font12;
-        font12.setPointSize(15);
-        font12.setBold(true);
-        serverHeading_2->setFont(font12);
+        QFont font14;
+        font14.setPointSize(15);
+        font14.setBold(true);
+        serverHeading_2->setFont(font14);
         serverHeading_2->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "background-color: rgba(0, 0, 0,0);\n"
 "border: none;"));
@@ -1989,11 +3132,11 @@ public:
 
         header = new QFrame(usersPage);
         header->setObjectName(QString::fromUtf8("header"));
-        QSizePolicy sizePolicy6(QSizePolicy::Expanding, QSizePolicy::Fixed);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(header->sizePolicy().hasHeightForWidth());
-        header->setSizePolicy(sizePolicy6);
+        QSizePolicy sizePolicy8(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        sizePolicy8.setHorizontalStretch(0);
+        sizePolicy8.setVerticalStretch(0);
+        sizePolicy8.setHeightForWidth(header->sizePolicy().hasHeightForWidth());
+        header->setSizePolicy(sizePolicy8);
         header->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0,0);\n"
 "border:none;\n"
 "padding:5px;\n"
@@ -2071,8 +3214,8 @@ public:
 
         mainBody = new QFrame(usersPage);
         mainBody->setObjectName(QString::fromUtf8("mainBody"));
-        sizePolicy.setHeightForWidth(mainBody->sizePolicy().hasHeightForWidth());
-        mainBody->setSizePolicy(sizePolicy);
+        sizePolicy4.setHeightForWidth(mainBody->sizePolicy().hasHeightForWidth());
+        mainBody->setSizePolicy(sizePolicy4);
         mainBody->setStyleSheet(QString::fromUtf8("background-color: rgba(0, 0, 0,0);\n"
 "border:none;"));
         mainBody->setFrameShape(QFrame::StyledPanel);
@@ -2100,7 +3243,7 @@ public:
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         serverHeading = new QLabel(headerLabel_2);
         serverHeading->setObjectName(QString::fromUtf8("serverHeading"));
-        serverHeading->setFont(font5);
+        serverHeading->setFont(font7);
         serverHeading->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "background-color: rgba(0, 0, 0,0);\n"
 "border: none;"));
@@ -2222,8 +3365,9 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(2);
-        stackedWidget_2->setCurrentIndex(0);
+        connectsym->setDefault(false);
+        stackedWidget->setCurrentIndex(0);
+        stackedWidget_2->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2233,7 +3377,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "QSLEEVE'", nullptr));
         menu->setText(QString());
-        connectsym->setText(QCoreApplication::translate("MainWindow", "Disconnected", nullptr));
+        connectsym->setText(QCoreApplication::translate("MainWindow", " Disconnected", nullptr));
         connectIcon->setText(QString());
         algo_sub_head->setText(QCoreApplication::translate("MainWindow", "KEY EXCHANGE ALGORITHM", nullptr));
         algo_name->setText(QString());
@@ -2290,6 +3434,7 @@ public:
         generalButton->setText(QCoreApplication::translate("MainWindow", "General", nullptr));
         proxyButton->setText(QCoreApplication::translate("MainWindow", "Proxy", nullptr));
         advancedButton->setText(QCoreApplication::translate("MainWindow", "Advanced", nullptr));
+        configButtonSettings->setText(QCoreApplication::translate("MainWindow", "Configuration", nullptr));
         label_20->setText(QCoreApplication::translate("MainWindow", "SETTINGS", nullptr));
         label_32->setText(QCoreApplication::translate("MainWindow", "QSLEEVE", nullptr));
         label_33->setText(QCoreApplication::translate("MainWindow", "Gateway to Quantum Security", nullptr));
@@ -2326,6 +3471,59 @@ public:
         label_31->setText(QCoreApplication::translate("MainWindow", "Connect script timeout", nullptr));
         label_37->setText(QCoreApplication::translate("MainWindow", "Disconnect script timeout", nullptr));
         browse1->setText(QCoreApplication::translate("MainWindow", "Browse", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Protocol", nullptr));
+        comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "UDP", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "TCP", nullptr));
+
+        label_2->setText(QCoreApplication::translate("MainWindow", "Port No.", nullptr));
+        lineEdit->setText(QCoreApplication::translate("MainWindow", "1194", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Network Device", nullptr));
+        comboBox_2->setItemText(0, QCoreApplication::translate("MainWindow", "TUN", nullptr));
+        comboBox_2->setItemText(1, QCoreApplication::translate("MainWindow", "TAP", nullptr));
+
+        label_4->setText(QCoreApplication::translate("MainWindow", "CA Certificate", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Browse", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "Server Certificate", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "Browse", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "Server Key", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("MainWindow", "Browse", nullptr));
+        label_7->setText(QCoreApplication::translate("MainWindow", "DH Parameter", nullptr));
+        pushButton_6->setText(QCoreApplication::translate("MainWindow", "Browse", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", "Retain IP Address", nullptr));
+        radioButton->setText(QCoreApplication::translate("MainWindow", "Yes", nullptr));
+        radioButton_2->setText(QCoreApplication::translate("MainWindow", "No", nullptr));
+        label_29->setText(QCoreApplication::translate("MainWindow", "Client Visibility", nullptr));
+        radioButton_3->setText(QCoreApplication::translate("MainWindow", "Yes", nullptr));
+        radioButton_4->setText(QCoreApplication::translate("MainWindow", "No", nullptr));
+        label_47->setText(QCoreApplication::translate("MainWindow", "Share Client Certificate", nullptr));
+        radioButton_5->setText(QCoreApplication::translate("MainWindow", "Yes", nullptr));
+        radioButton_6->setText(QCoreApplication::translate("MainWindow", "No", nullptr));
+        label_48->setText(QCoreApplication::translate("MainWindow", "Auto-Drop Inactive VPN Clients", nullptr));
+        radioButton_7->setText(QCoreApplication::translate("MainWindow", "Yes", nullptr));
+        radioButton_8->setText(QCoreApplication::translate("MainWindow", "No", nullptr));
+        label_49->setText(QCoreApplication::translate("MainWindow", "If Yes, specify time: ", nullptr));
+        label_50->setText(QCoreApplication::translate("MainWindow", "Keep Alive for", nullptr));
+        label_51->setText(QCoreApplication::translate("MainWindow", "Ping Time", nullptr));
+        label_52->setText(QCoreApplication::translate("MainWindow", "Disconnect Time", nullptr));
+        label_53->setText(QCoreApplication::translate("MainWindow", "Algorithms to be used", nullptr));
+        comboBox_3->setItemText(0, QCoreApplication::translate("MainWindow", "Kyber1024", nullptr));
+        comboBox_3->setItemText(1, QCoreApplication::translate("MainWindow", "Kyber768", nullptr));
+        comboBox_3->setItemText(2, QCoreApplication::translate("MainWindow", "Kyber90s1024", nullptr));
+        comboBox_3->setItemText(3, QCoreApplication::translate("MainWindow", "Kyber90s768", nullptr));
+        comboBox_3->setItemText(4, QCoreApplication::translate("MainWindow", "p521_Kyber90s1024", nullptr));
+        comboBox_3->setItemText(5, QCoreApplication::translate("MainWindow", "p521_Kyber90s1024", nullptr));
+
+        label_54->setText(QCoreApplication::translate("MainWindow", "Cipher", nullptr));
+        comboBox_4->setItemText(0, QCoreApplication::translate("MainWindow", "AES-256-GCM", nullptr));
+        comboBox_4->setItemText(1, QCoreApplication::translate("MainWindow", "AES-256-CBC", nullptr));
+
+        label_55->setText(QCoreApplication::translate("MainWindow", "Hash Function", nullptr));
+        comboBox_5->setItemText(0, QCoreApplication::translate("MainWindow", "SHA 384", nullptr));
+        comboBox_5->setItemText(1, QCoreApplication::translate("MainWindow", "SHA 1", nullptr));
+
+        label_56->setText(QCoreApplication::translate("MainWindow", "Max Clients", nullptr));
+        label_57->setText(QCoreApplication::translate("MainWindow", "Level of logs", nullptr));
+        label_58->setText(QCoreApplication::translate("MainWindow", "Level of Security Script", nullptr));
         label_18->setText(QCoreApplication::translate("MainWindow", "ABOUT US", nullptr));
         serverHeading_2->setText(QString());
         label_43->setText(QCoreApplication::translate("MainWindow", "Q-SLEEVE", nullptr));
